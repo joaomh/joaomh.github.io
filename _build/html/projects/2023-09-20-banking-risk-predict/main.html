@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="João Pinheiro" href="../2023-10-01-catboost-lgbm-xgboost/intro.html" />
+    <link rel="next" title="CV" href="../../cv.html" />
     <link rel="prev" title="Boosted Trees: XGBoost vs. CatBoost vs. LightGBM" href="../2023-10-01-catboost-lgbm-xgboost/main.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -738,7 +738,7 @@ dtype: int64
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Age" src="../../_images/age.png" />
+<p><img alt="Age" src="projects/2023-09-20-banking-risk-predict/age.png" />
 We can see that people with Bad Credit tend to more youth</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_housing</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Housing&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Housing&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -774,7 +774,7 @@ We can see that people with Bad Credit tend to more youth</p>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="House" src="../../_images/housing.png" />
+<p><img alt="House" src="projects/2023-09-20-banking-risk-predict/housing.png" />
 People who own a house have better credit.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_saving</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Saving accounts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Saving accounts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -810,7 +810,7 @@ People who own a house have better credit.</p>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Saving" src="../../_images/saving.png" />
+<p><img alt="Saving" src="projects/2023-09-20-banking-risk-predict/saving.png" />
 People with more savings accounts also have better credit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_checking</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Checking account&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Checking account&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -846,7 +846,7 @@ People with more savings accounts also have better credit</p>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Checking" src="../../_images/checking.png" /></p>
+<p><img alt="Checking" src="projects/2023-09-20-banking-risk-predict/checking.png" /></p>
 <p>The same here, people with more checking account has better credit</p>
 <div class="highlight-ptyhon notranslate"><div class="highlight"><pre><span></span>df_credit = df[&#39;Credit amount&#39;].values.tolist()
 df_good = df.loc[df[&quot;Risk&quot;] == &#39;good&#39;][&#39;Credit amount&#39;].values.tolist()
@@ -882,7 +882,7 @@ fig = dict(data=data, layout=layout)
 py.iplot(fig, filename=&#39;custom-sized-subplot-with-subplot-titles&#39;)
 </pre></div>
 </div>
-<p><img alt="Credit" src="../../_images/credit_amount.png" />
+<p><img alt="Credit" src="projects/2023-09-20-banking-risk-predict/credit_amount.png" />
 People with more than 4k in credit amount have worse credit than people with less</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_purpose</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Purpose&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Purpose&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -918,7 +918,7 @@ People with more than 4k in credit amount have worse credit than people with les
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Purpose" src="../../_images/purpose.png" />
+<p><img alt="Purpose" src="projects/2023-09-20-banking-risk-predict/purpose.png" />
 People that the purpose is to buy radio/TV have a better credit</p>
 <p>Now let’s see the distribution using two variables</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Checking account&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -950,7 +950,7 @@ People that the purpose is to buy radio/TV have a better credit</p>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;box-age-cat&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Credit" src="../../_images/amount_checking.png" />
+<p><img alt="Credit" src="projects/2023-09-20-banking-risk-predict/amount_checking.png" />
 The credit amount is also less in rich people (checking account), even in those bad credit</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Job&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -982,7 +982,7 @@ The credit amount is also less in rich people (checking account), even in those 
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;box-age-cat&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Credit" src="../../_images/amount_job.png" />
+<p><img alt="Credit" src="projects/2023-09-20-banking-risk-predict/amount_job.png" />
 Unskilled and non-residents with bad credit have more credit amount than others</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="preprocessing">
@@ -1582,7 +1582,7 @@ Name: Risk, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><img alt="png" src="../../_images/output_60_0.png" /></p>
+<p><img alt="png" src="projects/2023-09-20-banking-risk-predict/output_60_0.png" /></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="training-some-models">
 <h1>Training some Models<a class="headerlink" href="#training-some-models" title="Permalink to this heading">#</a></h1>
@@ -1666,7 +1666,7 @@ NB: 0.685554 (0.082030)
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;box-age-cat&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Models" src="../../_images/models_train.png" /></p>
+<p><img alt="Models" src="projects/2023-09-20-banking-risk-predict/models_train.png" /></p>
 <p>The best models were RandomForest and LGBM, we are going to train this model and use Optuna for hyperparameter optimization.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lgbm_model</span> <span class="o">=</span> <span class="n">LGBMClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">lgbmparameters</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_prob_lgbm</span> <span class="o">=</span> <span class="n">lgbm_model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -1899,7 +1899,7 @@ For the LGBM Model, the test Accu is: 0.7133333333333334
 </pre></div>
 </div>
 <p>Confusion Matrix in LGBM
-<img alt="png" src="../../_images/output_77_1.png" /></p>
+<img alt="png" src="projects/2023-09-20-banking-risk-predict/output_77_1.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate ROC curve values: fpr, tpr, thresholds</span>
 <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob_lgbm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
 
@@ -1912,7 +1912,7 @@ For the LGBM Model, the test Accu is: 0.7133333333333334
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><img alt="png" src="../../_images/output_78_0.png" /></p>
+<p><img alt="png" src="projects/2023-09-20-banking-risk-predict/output_78_0.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">optuna</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">plot_param_importances</span><span class="p">(</span><span class="n">study_lgbm</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1959,7 +1959,7 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
 </pre></div>
 </div>
 <p>Confusion Matrix in RandomForest
-<img alt="png" src="../../_images/output_83_1.png" /></p>
+<img alt="png" src="projects/2023-09-20-banking-risk-predict/output_83_1.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate ROC curve values: fpr, tpr, thresholds</span>
 <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob_rf</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
 
@@ -1972,7 +1972,7 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><img alt="png" src="../../_images/output_84_0.png" /></p>
+<p><img alt="png" src="projects/2023-09-20-banking-risk-predict/output_84_0.png" /></p>
 <p>LGBM model has a better performance after the optimization using Optuna, so we’ll this model as our final model.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="ranking-the-final-model">
@@ -1984,7 +1984,7 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
 </pre></div>
 </div>
 <p>SHAP results in LGBM
-<img alt="png" src="../../_images/output_88_1.png" /></p>
+<img alt="png" src="projects/2023-09-20-banking-risk-predict/output_88_1.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3528,11 +3528,11 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
       </div>
     </a>
     <a class="right-next"
-       href="../2023-10-01-catboost-lgbm-xgboost/intro.html"
+       href="../../cv.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">João Pinheiro</p>
+        <p class="prev-next-title">CV</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
