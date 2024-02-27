@@ -4,12 +4,12 @@
 format: jb-book
 root: intro
 chapters:
-- file: docs/about/about
-- file: docs/projects/projects
+- file: about
+- file: projects/projects
   sections:
-  - file: docs/projects/2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost
-  - file: docs/projects/2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict
-- file: docs/cv/cv
-- file: docs/publications/publications
-- file: docs/contact/contact
+  - file: projects/2023-10-01-catboost-lgbm-xgboost/main
+  - file: projects/2023-09-20-banking-risk-predict/main
+- file: cv
+- file: publications
+- file: contact
 
