@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Tables of Content: &#8212; An Introduction to Machine Learning</title>
+    <title>Boosted Trees: XGBoost vs. CatBoost vs. LightGBM &#8212; João Pinheiro website</title>
   
   
   
@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/projects/2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tables of Content:" href="../2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html" />
+    <link rel="next" title="Credit Risk Prediction" href="../2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html" />
     <link rel="prev" title="Projects" href="../projects.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -157,8 +157,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../../_static/logo.png" class="logo__image only-light" alt="An Introduction to Machine Learning - Home"/>
-    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="An Introduction to Machine Learning - Home"/>`);</script>
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="João Pinheiro website - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="João Pinheiro website - Home"/>`);</script>
   
   
 </a></div>
@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../about/about.html">About me</a></li>
 
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../projects.html">Projects</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tables of Content:</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Boosted Trees: XGBoost vs. CatBoost vs. LightGBM</a></li>
 
 
 
@@ -190,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html">Tables of Content:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html">Credit Risk Prediction</a></li>
 
 
 
@@ -258,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/joaomh/ml-book" target="_blank"
+      <li><a href="https://github.com/joaomh/joaomh.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/joaomh/ml-book/issues/new?title=Issue%20on%20page%20%2Fdocs/projects/2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/joaomh/joaomh.github.io/issues/new?title=Issue%20on%20page%20%2Fdocs/projects/2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -389,7 +389,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tables of Content:</h1>
+    <h1>Boosted Trees: XGBoost vs. CatBoost vs. LightGBM</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -399,7 +399,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tables of Content:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Boosted Trees: XGBoost vs. CatBoost vs. LightGBM</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble">Ensemble</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adaboost">AdaBoost</a></li>
@@ -442,34 +442,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>An overview of boosting tree algorithms, their main differences, performance comparisons, and hyperparameter optimization. In this notebook, we will delve deeper into boosted trees, specifically comparing XGBoost, CatBoost, and LightGBM. We will explore the main differences, and parameters in each algorithm, compare their performance on different datasets, assess their CPU and GPU usage, conduct Optuna optimization, and examine SHAP values.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="boosted-trees-xgboost-vs-catboost-vs-lightgbm">
+<h1>Boosted Trees: XGBoost vs. CatBoost vs. LightGBM<a class="headerlink" href="#boosted-trees-xgboost-vs-catboost-vs-lightgbm" title="Permalink to this heading">#</a></h1>
+<p>An overview of boosting tree algorithms, their main differences, performance comparisons, and hyperparameter optimization. In this notebook, we will delve deeper into boosted trees, specifically comparing XGBoost, CatBoost, and LightGBM. We will explore the main differences, and parameters in each algorithm, compare their performance on different datasets, assess their CPU and GPU usage, conduct Optuna optimization, and examine SHAP values.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/joaomh/xgboost-catboost-lgbm">This Notebook repository</a></p></li>
 <li><p><a class="reference external" href="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis">Undergraduate GitHub repository</a></p></li>
 <li><p><a class="reference external" href="https://bdta.abcd.usp.br/item/003122385">Link to my Undergraduate thesis in PT-BR</a></p></li>
 </ul>
-<section class="tex2jax_ignore mathjax_ignore" id="tables-of-content">
-<h1>Tables of Content:<a class="headerlink" href="#tables-of-content" title="Permalink to this heading">#</a></h1>
-<p><strong>1. <span class="xref myst">Introduction</span></strong></p>
-<p><strong>2. <span class="xref myst">Ensemble Learning</span></strong></p>
-<p><strong>3. <span class="xref myst">AdaBoost</span></strong></p>
-<p><strong>4. <span class="xref myst">GBMs</span></strong></p>
-<p><strong>5. <span class="xref myst">XGBoost vs. CatBoost vs. LightGBM</span></strong></p>
-<ul class="simple">
-<li><p>5.1 <span class="xref myst">Tree Symmetry</span></p></li>
-<li><p>5.2 <span class="xref myst">Splitting Method</span></p></li>
-</ul>
-<p><strong>6. <span class="xref myst">Models Performance CPU vs GPU</span></strong></p>
-<p><strong>7. <span class="xref myst">Optuna in XGBoost vs. CatBoost vs. LightGBM</span></strong></p>
-<p><strong>8. <span class="xref myst">Shap in XGBoost vs. CatBoost vs. LightGBM</span></strong></p>
-<p><strong>9. <span class="xref myst">Conclusions</span></strong></p>
-<p><strong>10. <span class="xref myst">Bibliography</span></strong></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <p>The purpose of this post is to introduce the fundamentals of boosting algorithms and the main difference between XGBoost, CatBoost, and LightGBM. We will give the reader some necessary keys to well understand and use related methods and be able to design adapted solutions when needed.</p>
 <p>If we look at the <a class="reference external" href="https://www.kaggle.com/kaggle-survey-2022">2022 Kaggle Data Science &amp; ML Survey</a>, we can see that Gradient Boosting Machines (GBMs) have been widely used in recent years. They are supervised machine learning algorithms that have consistently produced excellent results across a wide range of problems and have won numerous machine learning competitions.</p>
-<p><img alt="png1" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/kaggle_state.png?raw=true" /></p>
+<p><img alt="png1" src="../../../_images/kaggle_state.png" /></p>
 <p>They achieve this because boosting algorithms are very effective on tabular datasets and offer the same performance as other state-of-the-art deep learning techniques, but they are easier to implement and cost less in terms of computer resources.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="ensemble">
@@ -481,7 +467,7 @@ document.write(`
 <p><strong>Bagging</strong>: It is generally done with homogeneous predictors, each one operating independently in relation to the others, in a parallel manner. The final algorithm is then constructed by aggregating the results obtained from the base models in some form of average. Random Forest is one of the most famous algorithms.</p>
 <p><strong>Boosting</strong>: Generally implemented with homogeneous predictors, applied sequentially where the posterior model depends on the predecessor, and then these models are combined in the final ensemble. GBMs work like this</p>
 <p><strong>Stacking</strong>: It is typically done with heterogeneous predictors, training them in parallel, and then combining their outputs by training a meta-model that generates predictions based on the predictions of the various weak models. Here we can combine RandomForest with DecisionTree for example.</p>
-<p><img alt="png1" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/boosting_bagging.png?raw=true" /> <a class="reference external" href="https://towardsdatascience.com/ensemble-learning-bagging-boosting-3098079e5422">Image from Ensemble Learning: Bagging &amp; Boosting</a></p>
+<p><img alt="png1" src="../../../_images/boosting_bagging.png" /> <a class="reference external" href="https://towardsdatascience.com/ensemble-learning-bagging-boosting-3098079e5422">Image from Ensemble Learning: Bagging &amp; Boosting</a></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="adaboost">
 <h1>AdaBoost<a class="headerlink" href="#adaboost" title="Permalink to this heading">#</a></h1>
@@ -506,7 +492,7 @@ The weakness is identified by the weak estimator error rate</p>
 <li><p>Output <span class="math notranslate nohighlight">\(G(x) = sign\bigr[\sum^M_{m=1}\alpha_m\cdot G_m(x)\bigr]\)</span></p></li>
 </ol>
 <p>From [1][2]</p>
-<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/ada.png?raw=true" /> <a class="reference external" href="https://www.researchgate.net/publication/306054843_Multivariate_Analysis_of_the_Vector_Boson_Fusion_Higgs_Boson">Marsh, Brendan (2016). Multivariate Analysis of the Vector Boson Fusion Higgs Boson</a></p>
+<p><img alt="png" src="../../../_images/ada.png" /> <a class="reference external" href="https://www.researchgate.net/publication/306054843_Multivariate_Analysis_of_the_Vector_Boson_Fusion_Higgs_Boson">Marsh, Brendan (2016). Multivariate Analysis of the Vector Boson Fusion Higgs Boson</a></p>
 <p>Scikit-Learn have an implementation of AdaBoost</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
@@ -584,7 +570,7 @@ The weakness is identified by the weak estimator error rate</p>
 </ol>
 <p>From [3]</p>
 <p>As you can see, it is an iterative algorithm that usually works with decision trees. We train a sequence of decision trees to gradually reduce the training error (each new tree tries to predict the residual error, this is the error at that current iteration and then we multiplied by the learning rate</p>
-<p><img alt="boost" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/boosting_tree.png?raw=true" /></p>
+<p><img alt="boost" src="../../../_images/boosting_tree.png" /></p>
 <p>As you can see the final prediction is:</p>
 <p>initial_prediction + learning_rate<em>residual_0 + learning_rate</em>residual_1 _+ … learning_rate*residual_N</p>
 <p>Or</p>
@@ -695,7 +681,7 @@ weighted avg       0.96      0.96      0.96       113
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tree-symmetry">
 <h1>Tree Symmetry<a class="headerlink" href="#tree-symmetry" title="Permalink to this heading">#</a></h1>
-<p><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/CatBoost.png?raw=true" /><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/XGboost.png?raw=true" /><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/LGBM.png?raw=true" /></p>
+<p><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/CatBoost.png" /><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/XGboost.png" /><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/LGBM.png" /></p>
 <p>CatBoost produces symmetric trees (or balanced trees). This refers to the splitting condition across all the nodes at the same depth. On the other hand, XGBoost and LightGBM produce asymmetric trees, meaning that the splitting condition at each node can be different.</p>
 <p>Another important thing to note is that LightGBM grows leaf-wise (horizontally), while XGBoost grows level-wise (vertically). The picture below can show in more detail the differences in these growth types. This approach can lead to deeper trees with fewer nodes, potentially making it faster to train but may require more memory.</p>
 <p><img alt="" src="https://www.researchgate.net/publication/353155099/figure/fig2/AS:1044071766310913&#64;1625937515739/Level-wise-vs-leaf-wise-tree-growth.png" /></p>
@@ -1294,7 +1280,7 @@ Method call format</p>
 <span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_81_0.png?raw=true" /></p>
+<p><img alt="png" src="../../../_images/output_81_0.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shap</span>
 <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
 <span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">TreeExplainer</span><span class="p">(</span><span class="n">cat_model</span><span class="p">)</span>
@@ -1304,7 +1290,7 @@ Method call format</p>
 <span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_82_0.png?raw=true" /></p>
+<p><img alt="png" src="../../../_images/output_82_0.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shap</span>
 <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
 <span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">TreeExplainer</span><span class="p">(</span><span class="n">lgbm_model</span><span class="p">)</span>
@@ -1317,7 +1303,7 @@ Method call format</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
 </pre></div>
 </div>
-<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_83_1.png?raw=true" /></p>
+<p><img alt="png" src="../../../_images/output_83_11.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_cpu_shap</span>
 </pre></div>
 </div>
@@ -1416,7 +1402,7 @@ Method call format</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tables of Content:</p>
+        <p class="prev-next-title">Credit Risk Prediction</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1436,7 +1422,7 @@ Method call format</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tables of Content:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Boosted Trees: XGBoost vs. CatBoost vs. LightGBM</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble">Ensemble</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adaboost">AdaBoost</a></li>

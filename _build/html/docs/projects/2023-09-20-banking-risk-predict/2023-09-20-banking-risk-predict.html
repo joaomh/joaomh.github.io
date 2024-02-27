@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Tables of Content: &#8212; An Introduction to Machine Learning</title>
+    <title>Credit Risk Prediction &#8212; João Pinheiro website</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="CV" href="../../cv/cv.html" />
-    <link rel="prev" title="Tables of Content:" href="../2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost.html" />
+    <link rel="prev" title="Boosted Trees: XGBoost vs. CatBoost vs. LightGBM" href="../2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../../_static/logo.png" class="logo__image only-light" alt="An Introduction to Machine Learning - Home"/>
-    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="An Introduction to Machine Learning - Home"/>`);</script>
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="João Pinheiro website - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="João Pinheiro website - Home"/>`);</script>
   
   
 </a></div>
@@ -174,7 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../about/about.html">About me</a></li>
 
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../projects.html">Projects</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost.html">Tables of Content:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost.html">Boosted Trees: XGBoost vs. CatBoost vs. LightGBM</a></li>
 
 
 
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tables of Content:</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Credit Risk Prediction</a></li>
 
 
 
@@ -256,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/joaomh/ml-book" target="_blank"
+      <li><a href="https://github.com/joaomh/joaomh.github.io" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -273,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/joaomh/ml-book/issues/new?title=Issue%20on%20page%20%2Fdocs/projects/2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/joaomh/joaomh.github.io/issues/new?title=Issue%20on%20page%20%2Fdocs/projects/2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -387,7 +387,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tables of Content:</h1>
+    <h1>Credit Risk Prediction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -397,7 +397,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tables of Content:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Credit Risk Prediction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eda">EDA</a></li>
@@ -417,16 +417,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>This is a German credit risk dataset that can be found on Kaggle <a class="reference external" href="https://www.kaggle.com/datasets/kabure/german-credit-data-with-risk">German Risk</a>. My goal is to create a predictive model, use this model to generate a score for each client, and ultimately classify clients into risk profiles, differentiating between the riskiest and least risky</p>
-<section class="tex2jax_ignore mathjax_ignore" id="tables-of-content">
-<h1>Tables of Content:<a class="headerlink" href="#tables-of-content" title="Permalink to this heading">#</a></h1>
-<p><strong>1. <span class="xref myst">Introduction</span></strong></p>
-<p><strong>2. <span class="xref myst">Dataset</span></strong></p>
-<p><strong>3. <span class="xref myst">EDA</span></strong></p>
-<p><strong>5. <span class="xref myst">Preprocess</span></strong></p>
-<p><strong>6.  <span class="xref myst">Model</span></strong></p>
-<p><strong>7.  <span class="xref myst">Hyperparameter Optimization using Optuna</span></strong></p>
-<p><strong>8. <span class="xref myst">Ranking the final model</span></strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="credit-risk-prediction">
+<h1>Credit Risk Prediction<a class="headerlink" href="#credit-risk-prediction" title="Permalink to this heading">#</a></h1>
+<p>This is a German credit risk dataset that can be found on Kaggle <a class="reference external" href="https://www.kaggle.com/datasets/kabure/german-credit-data-with-risk">German Risk</a>. My goal is to create a predictive model, use this model to generate a score for each client, and ultimately classify clients into risk profiles, differentiating between the riskiest and least risky</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
@@ -765,7 +758,7 @@ dtype: int64
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Age" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/age.png?raw=true" />
+<p><img alt="Age" src="../../../_images/age.png" />
 We can see that people with Bad Credit tend to more youth</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_housing</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Housing&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Housing&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -801,7 +794,7 @@ We can see that people with Bad Credit tend to more youth</p>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="House" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/housing.png?raw=true" />
+<p><img alt="House" src="../../../_images/housing.png" />
 People who own a house have better credit.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_saving</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Saving accounts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Saving accounts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -837,7 +830,7 @@ People who own a house have better credit.</p>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Saving" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/saving.png?raw=true" />
+<p><img alt="Saving" src="../../../_images/saving.png" />
 People with more savings accounts also have better credit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_checking</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Checking account&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Checking account&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -873,7 +866,7 @@ People with more savings accounts also have better credit</p>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Checking" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/checking.png?raw=true" /></p>
+<p><img alt="Checking" src="../../../_images/checking.png" /></p>
 <p>The same here, people with more checking account has better credit</p>
 <div class="highlight-ptyhon notranslate"><div class="highlight"><pre><span></span>df_credit = df[&#39;Credit amount&#39;].values.tolist()
 df_good = df.loc[df[&quot;Risk&quot;] == &#39;good&#39;][&#39;Credit amount&#39;].values.tolist()
@@ -909,7 +902,7 @@ fig = dict(data=data, layout=layout)
 py.iplot(fig, filename=&#39;custom-sized-subplot-with-subplot-titles&#39;)
 </pre></div>
 </div>
-<p><img alt="Credit" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/credit_amount.png?raw=true" />
+<p><img alt="Credit" src="../../../_images/credit_amount.png" />
 People with more than 4k in credit amount have worse credit than people with less</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_purpose</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Purpose&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Purpose&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -945,7 +938,7 @@ People with more than 4k in credit amount have worse credit than people with les
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;custom-sized-subplot-with-subplot-titles&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Purpose" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/purpose.png?raw=true" />
+<p><img alt="Purpose" src="../../../_images/purpose.png" />
 People that the purpose is to buy radio/TV have a better credit</p>
 <p>Now let’s see the distribution using two variables</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Checking account&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -977,7 +970,7 @@ People that the purpose is to buy radio/TV have a better credit</p>
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;box-age-cat&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Credit" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/amount_checking.png?raw=true" />
+<p><img alt="Credit" src="../../../_images/amount_checking.png" />
 The credit amount is also less in rich people (checking account), even in those bad credit</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="n">df_good</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Risk&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;good&#39;</span><span class="p">][</span><span class="s1">&#39;Job&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -1009,7 +1002,7 @@ The credit amount is also less in rich people (checking account), even in those 
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;box-age-cat&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Credit" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/amount_job.png?raw=true" />
+<p><img alt="Credit" src="../../../_images/amount_job.png" />
 Unskilled and non-residents with bad credit have more credit amount than others</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="preprocessing">
@@ -1609,7 +1602,7 @@ Name: Risk, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_60_0.png?raw=true" /></p>
+<p><img alt="png" src="../../../_images/output_60_0.png" /></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="training-some-models">
 <h1>Training some Models<a class="headerlink" href="#training-some-models" title="Permalink to this heading">#</a></h1>
@@ -1693,7 +1686,7 @@ NB: 0.685554 (0.082030)
 <span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;box-age-cat&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><img alt="Models" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/models_train.png?raw=true" /></p>
+<p><img alt="Models" src="../../../_images/models_train.png" /></p>
 <p>The best models were RandomForest and LGBM, we are going to train this model and use Optuna for hyperparameter optimization.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lgbm_model</span> <span class="o">=</span> <span class="n">LGBMClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">lgbmparameters</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_prob_lgbm</span> <span class="o">=</span> <span class="n">lgbm_model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -1926,7 +1919,7 @@ For the LGBM Model, the test Accu is: 0.7133333333333334
 </pre></div>
 </div>
 <p>Confusion Matrix in LGBM
-<img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_77_1.png?raw=true" /></p>
+<img alt="png" src="../../../_images/output_77_1.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate ROC curve values: fpr, tpr, thresholds</span>
 <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob_lgbm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
 
@@ -1939,7 +1932,7 @@ For the LGBM Model, the test Accu is: 0.7133333333333334
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_78_0.png?raw=true" /></p>
+<p><img alt="png" src="../../../_images/output_78_0.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">optuna</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">plot_param_importances</span><span class="p">(</span><span class="n">study_lgbm</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1986,7 +1979,7 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
 </pre></div>
 </div>
 <p>Confusion Matrix in RandomForest
-<img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_83_1.png?raw=true" /></p>
+<img alt="png" src="../../../_images/output_83_1.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate ROC curve values: fpr, tpr, thresholds</span>
 <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob_rf</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
 
@@ -1999,7 +1992,7 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_84_0.png?raw=true" /></p>
+<p><img alt="png" src="../../../_images/output_84_0.png" /></p>
 <p>LGBM model has a better performance after the optimization using Optuna, so we’ll this model as our final model.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="ranking-the-final-model">
@@ -2011,7 +2004,7 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
 </pre></div>
 </div>
 <p>SHAP results in LGBM
-<img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_88_1.png?raw=true" /></p>
+<img alt="png" src="../../../_images/output_88_1.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3551,7 +3544,7 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tables of Content:</p>
+        <p class="prev-next-title">Boosted Trees: XGBoost vs. CatBoost vs. LightGBM</p>
       </div>
     </a>
     <a class="right-next"
@@ -3579,7 +3572,7 @@ For the RandomForest Model, the test Accu is: 0.7233333333333334
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tables of Content:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Credit Risk Prediction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eda">EDA</a></li>
