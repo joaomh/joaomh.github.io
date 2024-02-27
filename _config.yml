@@ -5,7 +5,7 @@ title: João Pinheiro website
 author: João Pinheiro
 copyright: "2023"
 logo: logo.png
-github: joaomh/joaomh.github.io
+
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
