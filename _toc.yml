@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: docs/about/about
+- file: docs/projects/projects
+  sections:
+  - file: docs/projects/2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost
+  - file: docs/projects/2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict
+- file: docs/cv/cv
+- file: docs/publications/publications
+- file: docs/contact/contact
+
