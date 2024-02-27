@@ -1,41 +1,9 @@
----
-layout: post
-title: "Boosted Trees: XGBoost vs. CatBoost vs. LightGBM"
-featured-img: tree-grow
-mathjax: true
-categories: [Machine Learning, Data Science]
-summary: An overview of boosting trees algorithms, their main differences, performance comparisons, and hyperparameter optimization.
----
+# Boosted Trees: XGBoost vs. CatBoost vs. LightGBM 
 An overview of boosting tree algorithms, their main differences, performance comparisons, and hyperparameter optimization. In this notebook, we will delve deeper into boosted trees, specifically comparing XGBoost, CatBoost, and LightGBM. We will explore the main differences, and parameters in each algorithm, compare their performance on different datasets, assess their CPU and GPU usage, conduct Optuna optimization, and examine SHAP values.
 
 - [This Notebook repository](https://github.com/joaomh/xgboost-catboost-lgbm)
 - [Undergraduate GitHub repository](https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis)
 - [Link to my Undergraduate thesis in PT-BR](https://bdta.abcd.usp.br/item/003122385)
-
-
-# Tables of Content:
-
-**1. [Introduction](#Introduction)**
-
-**2. [Ensemble Learning](#Ensemble)**
-
-**3. [AdaBoost](#Ada)** 
-
-**4. [GBMs](#GBM)** 
-
-**5. [XGBoost vs. CatBoost vs. LightGBM](#XGBoost)** 
-- 5.1 [Tree Symmetry](#Tree)
-- 5.2 [Splitting Method](Splitting)
-
-**6. [Models Performance CPU vs GPU](#Models)** 
-
-**7. [Optuna in XGBoost vs. CatBoost vs. LightGBM](#Optuna)** 
-
-**8. [Shap in XGBoost vs. CatBoost vs. LightGBM](#Shap)** 
-
-**9. [Conclusions](#Conclusion)**
-
-**10. [Bibliography](#Bibliography)**
 
 
 # Introduction
@@ -45,7 +13,7 @@ The purpose of this post is to introduce the fundamentals of boosting algorithms
 If we look at the [2022 Kaggle Data Science & ML Survey](https://www.kaggle.com/kaggle-survey-2022), we can see that Gradient Boosting Machines (GBMs) have been widely used in recent years. They are supervised machine learning algorithms that have consistently produced excellent results across a wide range of problems and have won numerous machine learning competitions.
 
 
-![png1](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/kaggle_state.png?raw=true)
+![png1](kaggle_state.png)
 
 They achieve this because boosting algorithms are very effective on tabular datasets and offer the same performance as other state-of-the-art deep learning techniques, but they are easier to implement and cost less in terms of computer resources.
 
@@ -64,7 +32,7 @@ There are various ensemble learning methods, but in this text, we will primarily
 
 **Stacking**: It is typically done with heterogeneous predictors, training them in parallel, and then combining their outputs by training a meta-model that generates predictions based on the predictions of the various weak models. Here we can combine RandomForest with DecisionTree for example.
 
-![png1](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/boosting_bagging.png?raw=true) [Image from Ensemble Learning: Bagging & Boosting](https://towardsdatascience.com/ensemble-learning-bagging-boosting-3098079e5422)
+![png1](boosting_bagging.png) [Image from Ensemble Learning: Bagging & Boosting](https://towardsdatascience.com/ensemble-learning-bagging-boosting-3098079e5422)
 
 # AdaBoost
 AdaBoost is a specific Boosting algorithm developed for classification problems hte original AdaBoost algorithm is designed for classification problems, where the output is either −1 or 1, and the final prediction for a given instance is a weighted sum of each generated weak classifier
@@ -94,7 +62,7 @@ $$err_m = \frac{\sum_{i=1}^Nw_i\mathbf{I}(y_i\neq G_m(x_i))}{\sum_{i=1}^Nw_i}$$
 
 From [1][2]
 
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/ada.png?raw=true) [Marsh, Brendan (2016). Multivariate Analysis of the Vector Boson Fusion Higgs Boson](https://www.researchgate.net/publication/306054843_Multivariate_Analysis_of_the_Vector_Boson_Fusion_Higgs_Boson)
+![png](ada.png) [Marsh, Brendan (2016). Multivariate Analysis of the Vector Boson Fusion Higgs Boson](https://www.researchgate.net/publication/306054843_Multivariate_Analysis_of_the_Vector_Boson_Fusion_Higgs_Boson)
 
 Scikit-Learn have an implementation of AdaBoost
 
@@ -200,7 +168,7 @@ From [3]
 
 As you can see, it is an iterative algorithm that usually works with decision trees. We train a sequence of decision trees to gradually reduce the training error (each new tree tries to predict the residual error, this is the error at that current iteration and then we multiplied by the learning rate
 
-![boost](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/boosting_tree.png?raw=true)
+![boost](boosting_tree.png)
 
 As you can see the final prediction is:
 
@@ -278,7 +246,7 @@ For other loss functions, you can refer to the documentation of all three algori
 
 
 # Tree Symmetry
-![](https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/CatBoost.png?raw=true)![](https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/XGboost.png?raw=true)![](https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/LGBM.png?raw=true)
+![](https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/CatBoost.png)![](https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/XGboost.png)![](https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/LGBM.png)
 
 CatBoost produces symmetric trees (or balanced trees). This refers to the splitting condition across all the nodes at the same depth. On the other hand, XGBoost and LightGBM produce asymmetric trees, meaning that the splitting condition at each node can be different.
 
@@ -1040,7 +1008,7 @@ shap.summary_plot(shap_values, X_test,show=False)
 
 
 
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_81_0.png?raw=true)
+![png](output_81_0.png)
     
 
 
@@ -1057,7 +1025,7 @@ shap.summary_plot(shap_values, X_test,show=False)
 
 
     
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_82_0.png?raw=true)
+![png](output_82_0.png)
     
 
 
@@ -1077,7 +1045,7 @@ shap.summary_plot(shap_values[1], X_test,show=False)
 
 
     
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_83_1.png?raw=true)
+![png](output_83_1.png)
     
 
 
