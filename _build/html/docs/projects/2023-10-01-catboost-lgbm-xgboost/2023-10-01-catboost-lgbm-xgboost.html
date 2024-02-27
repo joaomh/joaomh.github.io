@@ -1,0 +1,1525 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Tables of Content: &#8212; An Introduction to Machine Learning</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/projects/2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Tables of Content:" href="../2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html" />
+    <link rel="prev" title="Projects" href="../projects.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="An Introduction to Machine Learning - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="An Introduction to Machine Learning - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    João Pinheiro
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../about/about.html">About me</a></li>
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../projects.html">Projects</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tables of Content:</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html">Tables of Content:</a></li>
+
+
+
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cv/cv.html">CV</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../contact/contact.html">Contact</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/joaomh/ml-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/joaomh/ml-book/issues/new?title=Issue%20on%20page%20%2Fdocs/projects/2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/docs/projects/2023-10-01-catboost-lgbm-xgboost/2023-10-01-catboost-lgbm-xgboost.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tables of Content:</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tables of Content:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble">Ensemble</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adaboost">AdaBoost</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gbms">GBMs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-vs-catboost-vs-lightgbm">XGBoost vs. CatBoost vs. LightGBM</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tree-symmetry">Tree Symmetry</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-method">Splitting Method</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prevent-overfitting">Prevent Overfitting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning">Hyperparameter Tuning</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#models-performance-cpu-vs-gpu">Models Performance CPU vs. GPU</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epsilon">Epsilon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#higgs">Higgs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breast-cancer">Breast Cancer</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optuna">Optuna</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-hyperparameters-in-our-models">Final hyperparameters in our models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">XGBoost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catboost">CatBoost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lightgbm">LightGBM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-in-xgboost-catboost-lightgbm">SHAP in XGBoost, CatBoost, LightGBM</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-using-cpu">SHAP using CPU</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-using-gpu">SHAP using GPU</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>An overview of boosting tree algorithms, their main differences, performance comparisons, and hyperparameter optimization. In this notebook, we will delve deeper into boosted trees, specifically comparing XGBoost, CatBoost, and LightGBM. We will explore the main differences, and parameters in each algorithm, compare their performance on different datasets, assess their CPU and GPU usage, conduct Optuna optimization, and examine SHAP values.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/joaomh/xgboost-catboost-lgbm">This Notebook repository</a></p></li>
+<li><p><a class="reference external" href="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis">Undergraduate GitHub repository</a></p></li>
+<li><p><a class="reference external" href="https://bdta.abcd.usp.br/item/003122385">Link to my Undergraduate thesis in PT-BR</a></p></li>
+</ul>
+<section class="tex2jax_ignore mathjax_ignore" id="tables-of-content">
+<h1>Tables of Content:<a class="headerlink" href="#tables-of-content" title="Permalink to this heading">#</a></h1>
+<p><strong>1. <span class="xref myst">Introduction</span></strong></p>
+<p><strong>2. <span class="xref myst">Ensemble Learning</span></strong></p>
+<p><strong>3. <span class="xref myst">AdaBoost</span></strong></p>
+<p><strong>4. <span class="xref myst">GBMs</span></strong></p>
+<p><strong>5. <span class="xref myst">XGBoost vs. CatBoost vs. LightGBM</span></strong></p>
+<ul class="simple">
+<li><p>5.1 <span class="xref myst">Tree Symmetry</span></p></li>
+<li><p>5.2 <span class="xref myst">Splitting Method</span></p></li>
+</ul>
+<p><strong>6. <span class="xref myst">Models Performance CPU vs GPU</span></strong></p>
+<p><strong>7. <span class="xref myst">Optuna in XGBoost vs. CatBoost vs. LightGBM</span></strong></p>
+<p><strong>8. <span class="xref myst">Shap in XGBoost vs. CatBoost vs. LightGBM</span></strong></p>
+<p><strong>9. <span class="xref myst">Conclusions</span></strong></p>
+<p><strong>10. <span class="xref myst">Bibliography</span></strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>The purpose of this post is to introduce the fundamentals of boosting algorithms and the main difference between XGBoost, CatBoost, and LightGBM. We will give the reader some necessary keys to well understand and use related methods and be able to design adapted solutions when needed.</p>
+<p>If we look at the <a class="reference external" href="https://www.kaggle.com/kaggle-survey-2022">2022 Kaggle Data Science &amp; ML Survey</a>, we can see that Gradient Boosting Machines (GBMs) have been widely used in recent years. They are supervised machine learning algorithms that have consistently produced excellent results across a wide range of problems and have won numerous machine learning competitions.</p>
+<p><img alt="png1" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/kaggle_state.png?raw=true" /></p>
+<p>They achieve this because boosting algorithms are very effective on tabular datasets and offer the same performance as other state-of-the-art deep learning techniques, but they are easier to implement and cost less in terms of computer resources.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ensemble">
+<h1>Ensemble<a class="headerlink" href="#ensemble" title="Permalink to this heading">#</a></h1>
+<p>Many machine learning models primarily aim for high prediction accuracy using a single model, where boosting algorithms strive to enhance predictions by sequentially training a series of weak models, with each model compensating for the weaknesses of its predecessors.</p>
+<p>First of all, we need to understand Ensemble Learning, it’s based on the idea of combining several simpler prediction models (weak learner), training them for the same task, and producing from them a more complex grouped model (strong learner) that is the sum of its parts.</p>
+<p>For example, when creating an ensemble model based on several decision trees, which are simple yet high-variance models (often considered ‘weak learners’), we need to aggregate them to enhance their resistance to data variations. Therefore, it makes sense to train the trees separately, allowing each one to adapt to different parts of the dataset. This way, each tree gains knowledge about various data variations, collectively improving the ensemble’s predictive performance.</p>
+<p>There are various ensemble learning methods, but in this text, we will primarily focus on Boosting, which is used in GBMs, but we can mention three algorithms that aim at combining weak learners:</p>
+<p><strong>Bagging</strong>: It is generally done with homogeneous predictors, each one operating independently in relation to the others, in a parallel manner. The final algorithm is then constructed by aggregating the results obtained from the base models in some form of average. Random Forest is one of the most famous algorithms.</p>
+<p><strong>Boosting</strong>: Generally implemented with homogeneous predictors, applied sequentially where the posterior model depends on the predecessor, and then these models are combined in the final ensemble. GBMs work like this</p>
+<p><strong>Stacking</strong>: It is typically done with heterogeneous predictors, training them in parallel, and then combining their outputs by training a meta-model that generates predictions based on the predictions of the various weak models. Here we can combine RandomForest with DecisionTree for example.</p>
+<p><img alt="png1" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/boosting_bagging.png?raw=true" /> <a class="reference external" href="https://towardsdatascience.com/ensemble-learning-bagging-boosting-3098079e5422">Image from Ensemble Learning: Bagging &amp; Boosting</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="adaboost">
+<h1>AdaBoost<a class="headerlink" href="#adaboost" title="Permalink to this heading">#</a></h1>
+<p>AdaBoost is a specific Boosting algorithm developed for classification problems hte original AdaBoost algorithm is designed for classification problems, where the output is either −1 or 1, and the final prediction for a given instance is a weighted sum of each generated weak classifier</p>
+<div class="math notranslate nohighlight">
+\[
+G(x) = sign\bigr[\sum^M_{m=1}\alpha_m\cdot G_m(x)\bigr]
+\]</div>
+<p>Here, the weights <span class="math notranslate nohighlight">\(\alpha_m\)</span>
+are computed by the boosting algorithm, and the idea is to increase the influence of weak learners who are more accurate while simultaneously penalizing those who are not.
+The weakness is identified by the weak estimator error rate</p>
+<div class="math notranslate nohighlight">
+\[err_m = \frac{\sum_{i=1}^Nw_i\mathbf{I}(y_i\neq G_m(x_i))}{\sum_{i=1}^Nw_i}\]</div>
+<ol class="arabic">
+<li><p>Initialize the observation weights <span class="math notranslate nohighlight">\(w_i = 1/N, i = 1, 2, . . . , N .\)</span></p></li>
+<li><p>For <span class="math notranslate nohighlight">\(m=1\)</span> to <span class="math notranslate nohighlight">\(M\)</span>:</p>
+<p>2.1. Fit a classifier <span class="math notranslate nohighlight">\(G_m(x)\)</span> to the training data using weights <span class="math notranslate nohighlight">\(w_i\)</span></p>
+<p>2.2. Compute <span class="math notranslate nohighlight">\(err_m = \frac{\sum_{i=1}^Nw_i\mathbf{1}(y_i\neq G_m(x_i))}{\sum_{i=1}^Nw_i}\)</span></p>
+<p>2.3. Compute <span class="math notranslate nohighlight">\(\alpha_m = log((1-err_m)/err_m)\)</span></p>
+<p>2.4. Set <span class="math notranslate nohighlight">\(w_i \rightarrow w_i\cdot exp[\alpha_m \cdot \mathbf{1}(y_i\neq G_m(x_i))],i=1,2,...,N\)</span></p>
+</li>
+<li><p>Output <span class="math notranslate nohighlight">\(G(x) = sign\bigr[\sum^M_{m=1}\alpha_m\cdot G_m(x)\bigr]\)</span></p></li>
+</ol>
+<p>From [1][2]</p>
+<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/ada.png?raw=true" /> <a class="reference external" href="https://www.researchgate.net/publication/306054843_Multivariate_Analysis_of_the_Vector_Boson_Fusion_Higgs_Boson">Marsh, Brendan (2016). Multivariate Analysis of the Vector Boson Fusion Higgs Boson</a></p>
+<p>Scikit-Learn have an implementation of AdaBoost</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_classification</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                           <span class="n">n_informative</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_redundant</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                           <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0.983
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+
+<span class="c1"># Split the data into training and testing sets</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Create an AdaBoostClassifier with a base DecisionTreeClassifier</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Fit the classifier to the training data</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Make predictions on the test data</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluate the model</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0.96
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="gbms">
+<h1>GBMs<a class="headerlink" href="#gbms" title="Permalink to this heading">#</a></h1>
+<p>The Gradient Boosting Machines algorithm works by optimizing any given differentiable loss function, using gradient descent [3].</p>
+<p>We can write the GBM model as</p>
+<div class="math notranslate nohighlight">
+\[F_M(x) = F_0(x) + \sum_{m=1}^MF_m(x)\]</div>
+<p><span class="math notranslate nohighlight">\(\beta_{m}h(x; a_m)\)</span> are the base functions learners, where <span class="math notranslate nohighlight">\(\beta_m\)</span> is the weight, and <span class="math notranslate nohighlight">\(a_m\)</span> the parameters of the learner <span class="math notranslate nohighlight">\(h\)</span>. We have a loss function <span class="math notranslate nohighlight">\(L(y_i,F_m(x_i))\)</span>, so we would like to find all optimal values of these parameters that would minimize this loss function.</p>
+<div class="math notranslate nohighlight">
+\[\{\beta_m,\alpha_m\}_1^M = {\arg\min}_{\{\beta'_m,\alpha'_m\}_1^M}\sum_{i=1}^n L\Biggl(y^{(i)},\sum_{m=1}^M\beta'_mh(\mathbf{x}^{(i)};\alpha'_m)\Biggl)\]</div>
+<p>In these situations where is infeasible we can try a ‘greedy-stagewise’ approach for <span class="math notranslate nohighlight">\(m=1,2,3,...,M\)</span></p>
+<div class="math notranslate nohighlight">
+\[(\beta_m,\alpha_m) = \arg\min_{\beta,\alpha}\sum_{i=1}^n L\Biggl(y^{(i)},F_{m-1}\mathbf{x}^{(i)} + \beta h(\mathbf{x}^{(i)};\alpha)\Biggl)\]</div>
+<p>Then we can use a vectorized notation and make it similar to the gradient descent formula. The learning rate, <span class="math notranslate nohighlight">\(\eta\)</span> shrinks the influence of the new learner.</p>
+<div class="math notranslate nohighlight">
+\[F_m(\mathbf{X}) = F_{m-1}(\mathbf{X}) + \eta \Delta_m(X)\]</div>
+<p>The gradient of the loss function <span class="math notranslate nohighlight">\(L\)</span> with relation to the last estimate <span class="math notranslate nohighlight">\(F_{m−1}(x)\)</span> is,</p>
+<div class="math notranslate nohighlight">
+\[-g_m(\mathbf{x}^{(i)}) = -\Bigg[\frac{\partial L(y^{(i)},c^{(i)})}{\partial F(\mathbf{x}^{(i)})}\Bigg]\]</div>
+<p>The gradient of the loss function <span class="math notranslate nohighlight">\(L\)</span> with respect to the last prediction is sometimes called pseudo-residual, and written as <span class="math notranslate nohighlight">\(r_{m−1}\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf r_{m_1} = \nabla F_{m-1}(\mathbf{X})L(y,F_{m-1}(\mathbf{X})) = \nabla \hat y_{m-1}L(y,\hat{y}_{\mathbf{m-1}})\]</div>
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(F_0(\mathbf{X}) = \arg\min_v\sum_{i=1}^n L(y^{(i)},v)\)</span></p></li>
+<li><p>For <span class="math notranslate nohighlight">\(m=1\)</span> to <span class="math notranslate nohighlight">\(M\)</span>:</p>
+<p>2.1. <span class="math notranslate nohighlight">\(\mathbf r_{m_1} = \nabla \hat y_{m-1}L(y,\hat{y}_{\mathbf{m-1}})\)</span></p>
+<p>2.2. <span class="math notranslate nohighlight">\(\alpha = \arg\min_{\alpha,\beta}\sum_{i=1}^n(\mathbf{r}_{m-1}^{(i)}-\beta h(\mathbf{x}^{(i)};\alpha))^2\)</span></p>
+<p>2.3. <span class="math notranslate nohighlight">\(\beta = \arg\min_{\beta}\sum_{i=1}^nL(y^{(i)},F_{m-1}(\mathbf{x}^{(i))}+\beta h(\mathbf{x}^{(i))};\alpha_m)\)</span></p>
+<p>2.4. <span class="math notranslate nohighlight">\(\Delta_m(X) = \beta_mh(\mathbf{X};\alpha_m)\)</span></p>
+<p>2.5 <span class="math notranslate nohighlight">\(F_m(\mathbf{X}) = F_{m-1}(\mathbf{X}) + \eta \Delta_m(X)\)</span></p>
+</li>
+<li><p>Output <span class="math notranslate nohighlight">\(F_m\)</span></p></li>
+</ol>
+<p>From [3]</p>
+<p>As you can see, it is an iterative algorithm that usually works with decision trees. We train a sequence of decision trees to gradually reduce the training error (each new tree tries to predict the residual error, this is the error at that current iteration and then we multiplied by the learning rate</p>
+<p><img alt="boost" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/boosting_tree.png?raw=true" /></p>
+<p>As you can see the final prediction is:</p>
+<p>initial_prediction + learning_rate<em>residual_0 + learning_rate</em>residual_1 _+ … learning_rate*residual_N</p>
+<p>Or</p>
+<p><span class="math notranslate nohighlight">\(F_m(\mathbf{X}) = F_{m-1}(\mathbf{X}) + \eta \Delta_m(X)\)</span></p>
+<p>We also can find the Gradient Boosting function in scikit-learn</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">GradientBoostingClassifier</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">load_breast_cancer</span><span class="p">()[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="n">load_breast_cancer</span><span class="p">()[</span><span class="s1">&#39;feature_names&#39;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">load_breast_cancer</span><span class="p">()[</span><span class="s1">&#39;target&#39;</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">])</span>
+<span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">kf</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+    <span class="n">X_train</span><span class="p">,</span><span class="n">X_val</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span><span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">],</span>
+    <span class="n">y_train</span><span class="p">,</span><span class="n">y_val</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span><span class="n">y</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">],</span>
+<span class="n">gradient_booster</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">()</span>
+<span class="n">gradient_booster</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_val</span><span class="p">,</span><span class="n">gradient_booster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_val</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+           0       0.98      0.93      0.96        46
+           1       0.96      0.99      0.97        67
+
+    accuracy                           0.96       113
+   macro avg       0.97      0.96      0.96       113
+weighted avg       0.96      0.96      0.96       113
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="xgboost-vs-catboost-vs-lightgbm">
+<h1>XGBoost vs. CatBoost vs. LightGBM<a class="headerlink" href="#xgboost-vs-catboost-vs-lightgbm" title="Permalink to this heading">#</a></h1>
+<p>XGBoost, Catboost, and LightGBM are all variations of gradient boosting algorithms, each employing decision trees as weak learners. I strongly recommend reading the papers [4], [5], [6]. Now, I’m going to highlight the main differences in each algorithm.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>XGBoost</p></th>
+<th class="head"><p>CatBoost</p></th>
+<th class="head"><p>LightGBM</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Developer</p></td>
+<td><p>DMLC</p></td>
+<td><p>Yandex</p></td>
+<td><p>Microsoft</p></td>
+</tr>
+<tr class="row-odd"><td><p>Release Year</p></td>
+<td><p>2014</p></td>
+<td><p>2017</p></td>
+<td><p>2016</p></td>
+</tr>
+<tr class="row-even"><td><p>Tree Symmetry</p></td>
+<td><p>Asymmetric: Level-wise tree growth</p></td>
+<td><p>Symmetric</p></td>
+<td><p>Asymmetric: Leaf-wise tree growth</p></td>
+</tr>
+<tr class="row-odd"><td><p>Splitting Method</p></td>
+<td><p>Pre-sorted and histogram-based algorithms</p></td>
+<td><p>Greedy</p></td>
+<td><p>GOSS</p></td>
+</tr>
+<tr class="row-even"><td><p>Categorical Columns</p></td>
+<td><p>Support but must use numerical columns, cannot interpret ordinal category</p></td>
+<td><p>Support</p></td>
+<td><p>Support</p></td>
+</tr>
+<tr class="row-odd"><td><p>Text Columns</p></td>
+<td><p>Not Support</p></td>
+<td><p>Support: Bag-of-Words, Naive-Bayes or BM25 to calculate numerical features from text</p></td>
+<td><p>Not Support</p></td>
+</tr>
+<tr class="row-even"><td><p>Missing Values</p></td>
+<td><p>Handle</p></td>
+<td><p>Handle</p></td>
+<td><p>Handle</p></td>
+</tr>
+<tr class="row-odd"><td><p>Training on</p></td>
+<td><p>CPU and GPU</p></td>
+<td><p>CPU and GPU</p></td>
+<td><p>CPU and GPU</p></td>
+</tr>
+<tr class="row-even"><td><p>Others things</p></td>
+<td><p>Works with Spark</p></td>
+<td><p>Easy generate the Learning Curve</p></td>
+<td><p>Have a RandomForest “boosting method”</p></td>
+</tr>
+</tbody>
+</table>
+<p>All of the models have different loss functions in their objectives, some of which are as follows:</p>
+<p>For Regression:</p>
+<ul class="simple">
+<li><p>L2: mean squared error (default, recovers the mean value)</p></li>
+<li><p>L1: mean absolute error (good for outliers)</p></li>
+<li><p>MAPE: mean absolute percentage error (good for time series)</p></li>
+<li><p>Quantile: predict quantiles</p></li>
+<li><p>Poisson</p></li>
+</ul>
+<p>For Classification:</p>
+<ul class="simple">
+<li><p>Logloss for binary classification</p></li>
+<li><p>Multiclass and cross-entropy for multi-class problems</p></li>
+</ul>
+<p>For other loss functions, you can refer to the documentation of all three algorithms.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tree-symmetry">
+<h1>Tree Symmetry<a class="headerlink" href="#tree-symmetry" title="Permalink to this heading">#</a></h1>
+<p><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/CatBoost.png?raw=true" /><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/XGboost.png?raw=true" /><img alt="" src="https://github.com/joaomh/study_boosting_optuna_USP_undergraduate_thesis/blob/main/LaTeX-overleaf/images/LGBM.png?raw=true" /></p>
+<p>CatBoost produces symmetric trees (or balanced trees). This refers to the splitting condition across all the nodes at the same depth. On the other hand, XGBoost and LightGBM produce asymmetric trees, meaning that the splitting condition at each node can be different.</p>
+<p>Another important thing to note is that LightGBM grows leaf-wise (horizontally), while XGBoost grows level-wise (vertically). The picture below can show in more detail the differences in these growth types. This approach can lead to deeper trees with fewer nodes, potentially making it faster to train but may require more memory.</p>
+<p><img alt="" src="https://www.researchgate.net/publication/353155099/figure/fig2/AS:1044071766310913&#64;1625937515739/Level-wise-vs-leaf-wise-tree-growth.png" /></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="splitting-method">
+<h1>Splitting Method<a class="headerlink" href="#splitting-method" title="Permalink to this heading">#</a></h1>
+<p>This determines how the splitting is determined in each algorithm.</p>
+<p>In XGBoost, the pre-sorted algorithm considers all features and sorts them by value. The histogram algorithm groups feature values into discrete bins and finds the split point based on these bins. However, it is slower than GOSS.</p>
+<p>CatBoost uses a greedy method where a list of possible candidates for feature splits is assigned to the leaf, and the split that results in the smallest penalty is selected.</p>
+<p>In LightGBM, Gradient-based one-sided sampling (GOSS) retains all the data with large gradients and performs random sampling for data instances with small gradients (small training error). This results in fewer data instances used to train the model.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="prevent-overfitting">
+<h1>Prevent Overfitting<a class="headerlink" href="#prevent-overfitting" title="Permalink to this heading">#</a></h1>
+<p>All of the tree models come equipped with excellent parameters designed to mitigate overfitting. We will utilize many of these parameters in our Optuna hyperparameter optimization, some of them are:</p>
+<p><strong>early_stopping_rounds:</strong> This parameter employs an integer to halt the learning process. It identifies a point at which the validation score no longer improves, and in some cases, it may even start to deteriorate, while the training score continues to improve. This is not a hyperparameter that we intend to tune, but it’s a crucial parameter to use, and it’s not active by default.</p>
+<p><strong>reg_alpha or lambda_l1:</strong> These parameters represent the coefficient at the L1 regularization term of the cost function.</p>
+<p><strong>reg_lambda or l2_leaf_reg:</strong> These parameters represent the coefficient at the L2 regularization term of the cost function.</p>
+<p><strong>learning_rate:</strong> This setting is used to control the gradient step size and, in turn, affects the overall training time. Smaller values require more iterations for training.</p>
+<p><strong>depth or max_depth:</strong> This parameter limits the maximum depth of the tree model. It is employed to combat overfitting when dealing with small datasets.</p>
+<p><strong>num_leaves or max_leaves:</strong> The maximum number of leaves in the resulting tree</p>
+<p><strong>random_strength:</strong> This parameter determines the amount of randomness applied when scoring splits during the selection of the tree structure. You can adjust this parameter to mitigate the risk of overfitting in your model.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hyperparameter-tuning">
+<h1>Hyperparameter Tuning<a class="headerlink" href="#hyperparameter-tuning" title="Permalink to this heading">#</a></h1>
+<p>As you can see all three libraries offer a variety of hyperparameters to tune, and their effectiveness can vary depending on the dataset. We will use Optuna in our tests</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="models-performance-cpu-vs-gpu">
+<h1>Models Performance CPU vs. GPU<a class="headerlink" href="#models-performance-cpu-vs-gpu" title="Permalink to this heading">#</a></h1>
+<p>In this section, we are going to use three different datasets: epsilon, Higgs, and breast cancer. However, we will not delve deeply into the typical steps of a data science project, such as EDA (Exploratory Data Analysis), pre-processing, handling missing values, plotting some variables, and analyzing correlations. Our primary focus will be the performance of out-of-the-box models, as they are designed to handle certain aspects by default, such as missing values.</p>
+<section id="epsilon">
+<h2>Epsilon<a class="headerlink" href="#epsilon" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#epsilon">Epsilon dataset</a>.
+This dataset is best suited for binary classification.</p>
+<p>The training dataset contains 400000 objects. Each object is described by 2001 columns. The first column contains the label value, all other columns contain numerical features.</p>
+<p>The validation dataset contains 100,000 objects. The structure is identical to the training dataset.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">catboost.datasets</span> <span class="kn">import</span> <span class="n">epsilon</span>
+<span class="n">epsilon_train</span><span class="p">,</span> <span class="n">epsilon_test</span> <span class="o">=</span> <span class="n">epsilon</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">epsilon_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">epsilon_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>((400000, 2001), (100000, 2001))
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># convert target -1 to 0</span>
+<span class="n">epsilon_train</span><span class="p">[</span><span class="n">epsilon_train</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">epsilon_test</span><span class="p">[</span><span class="n">epsilon_test</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">epsilon_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">epsilon_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">epsilon_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">epsilon_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>((400000, 2000), (100000, 2000), (400000,), (100000,))
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">timeit</span>
+<span class="kn">from</span> <span class="nn">catboost</span> <span class="kn">import</span> <span class="n">CatBoostClassifier</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">from</span> <span class="nn">lightgbm</span> <span class="kn">import</span> <span class="n">LGBMClassifier</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="n">time_cpu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CPU&#39;</span><span class="p">]</span>
+<span class="n">results_auc_cpu</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">XGBClassifier</span><span class="p">(),</span>
+          <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+          <span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">)):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">model_</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">time_cpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">y_prob</span> <span class="o">=</span> <span class="n">model_</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">)</span>
+    <span class="n">results_auc_cpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_cpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;CPU&#39;, 100.57174560100248, 173.5943495399988, 29.465143476001685]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results_auc_cpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[1.0, 1.0, 1.0]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">XGBClassifier</span><span class="p">(</span><span class="n">tree_method</span><span class="o">=</span><span class="s1">&#39;gpu_hist&#39;</span><span class="p">),</span>
+          <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;GPU&quot;</span><span class="p">),</span>
+          <span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;gpu&#39;</span><span class="p">)]</span>
+
+<span class="n">time_gpu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GPU&#39;</span><span class="p">]</span>
+<span class="n">results_auc_gpu</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">)):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">model_</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">time_gpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">y_prob</span> <span class="o">=</span> <span class="n">model_</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">)</span>
+    <span class="n">results_auc_gpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_gpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;GPU&#39;, 8.82751414100494, 18.60794683700078, 13.281327325996244]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results_auc_gpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[1.0, 1.0, 1.0]
+</pre></div>
+</div>
+</section>
+<section id="higgs">
+<h2>Higgs<a class="headerlink" href="#higgs" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://archive.ics.uci.edu/dataset/280/higgs">Higgs</a>
+This is a classification problem to distinguish between a signal process that produces Higgs bosons and a background process that does not.</p>
+<p>The training dataset contains 10500000 objects. Each object is described by 29 columns. The first column contains the label value, all other columns contain numerical features.</p>
+<p>The validation dataset contains 5000000 objects. The structure is identical to the training dataset.
+Method call format</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">catboost.datasets</span> <span class="kn">import</span> <span class="n">higgs</span>
+<span class="n">higgs_train</span><span class="p">,</span> <span class="n">higgs_test</span> <span class="o">=</span> <span class="n">higgs</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">higgs_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">higgs_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>((10500000, 29), (500000, 29))
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">higgs_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">higgs_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">higgs_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">higgs_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>((10500000, 28), (500000, 28), (10500000,), (500000,))
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="n">time_cpu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CPU&#39;</span><span class="p">]</span>
+<span class="n">results_auc_cpu</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">XGBClassifier</span><span class="p">(),</span>
+          <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+          <span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">)):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">model_</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">time_cpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">y_prob</span> <span class="o">=</span> <span class="n">model_</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">)</span>
+    <span class="n">results_auc_cpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_cpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;CPU&#39;, 208.93801863700355, 304.1608348700029, 30.22637001700059]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results_auc_cpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[0.823429407021503, 0.8412804649425808, 0.8118326628507959]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">XGBClassifier</span><span class="p">(</span><span class="n">tree_method</span><span class="o">=</span><span class="s1">&#39;gpu_hist&#39;</span><span class="p">),</span>
+          <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;GPU&quot;</span><span class="p">),</span>
+          <span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;gpu&#39;</span><span class="p">)]</span>
+
+<span class="n">time_gpu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GPU&#39;</span><span class="p">]</span>
+<span class="n">results_auc_gpu</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">)):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">model_</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">time_gpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">y_prob</span> <span class="o">=</span> <span class="n">model_</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">)</span>
+    <span class="n">results_auc_gpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_gpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;GPU&#39;, 5.500959073993727, 43.70296749100089, 14.413947692002694]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results_auc_gpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[0.8237744245413271, 0.8105542884220551, 0.8118326588372813]
+</pre></div>
+</div>
+</section>
+<section id="breast-cancer">
+<h2>Breast Cancer<a class="headerlink" href="#breast-cancer" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic">Breast Cancer</a></p>
+<p>The breast cancer dataset is a classic and very easy binary classification dataset.</p>
+<p>Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass.  They describe the characteristics of the cell nuclei present in the image</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+<span class="n">breast_cancer</span> <span class="o">=</span>  <span class="n">load_breast_cancer</span><span class="p">(</span><span class="n">as_frame</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">frame</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">breast_cancer</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;target&#39;</span><span class="p">]</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>((398, 30), (171, 30), (398,), (171,))
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="n">time_cpu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CPU&#39;</span><span class="p">]</span>
+<span class="n">results_auc_cpu</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">XGBClassifier</span><span class="p">(),</span>
+          <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+          <span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=-</span><span class="mi">1</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">)):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">model_</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">time_cpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">y_prob</span> <span class="o">=</span> <span class="n">model_</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">)</span>
+    <span class="n">results_auc_cpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_cpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;CPU&#39;, 0.016339898997102864, 0.9324936460034223, 0.02608547400450334]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results_auc_cpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[0.9947089947089948, 0.9972075249853027, 0.9944150499706055]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">XGBClassifier</span><span class="p">(</span><span class="n">tree_method</span><span class="o">=</span><span class="s1">&#39;gpu_hist&#39;</span><span class="p">),</span>
+          <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;GPU&quot;</span><span class="p">),</span>
+          <span class="n">LGBMClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">device</span><span class="o">=</span><span class="s1">&#39;gpu&#39;</span><span class="p">)]</span>
+
+<span class="n">time_gpu</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GPU&#39;</span><span class="p">]</span>
+<span class="n">results_auc_gpu</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">)):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">model_</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+    <span class="n">time_gpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+    <span class="n">y_prob</span> <span class="o">=</span> <span class="n">model_</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">)</span>
+    <span class="n">results_auc_gpu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_gpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;GPU&#39;, 0.0601679419996799, 17.182826510994346, 0.45593334099976346]
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results_auc_gpu</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[0.9938271604938271, 0.9977954144620811, 0.9952968841857731]
+</pre></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="optuna">
+<h1>Optuna<a class="headerlink" href="#optuna" title="Permalink to this heading">#</a></h1>
+<p>Now, let’s attempt to utilize Optuna with the three algorithms, applying it to our largest dataset. We will employ early_stopping to determine the optimal number of iterations that minimize the validation loss, and we’ll also consider class weights using the ‘balanced’ option.</p>
+<p>Another valuable aspect to explore is the use of sample weights, which can be passed as an array of shape n_samples. This feature proves exceptionally useful in applications such as churn modeling, where we aim to prevent the churn of high-value customers with greater profitability.</p>
+<p>Here, we have a function that calculates numerous classification metrics. While our primary optimization focus will be on AUC, feel free to make adjustments as needed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">timeit</span>
+<span class="kn">import</span> <span class="nn">gc</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<span class="kn">import</span> <span class="nn">optuna</span>
+<span class="kn">from</span> <span class="nn">optuna.visualization</span> <span class="kn">import</span> <span class="n">plot_optimization_history</span>
+<span class="kn">from</span> <span class="nn">optuna.visualization</span> <span class="kn">import</span> <span class="n">plot_param_importances</span>
+<span class="kn">from</span> <span class="nn">catboost</span> <span class="kn">import</span> <span class="n">CatBoostClassifier</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">import</span> <span class="nn">lightgbm</span> <span class="k">as</span> <span class="nn">lightgbm</span>
+<span class="kn">from</span> <span class="nn">lightgbm</span> <span class="kn">import</span> <span class="n">LGBMClassifier</span>
+
+<span class="k">def</span> <span class="nf">metrics_validation</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Input:</span>
+<span class="sd">        y_prob: model predict prob</span>
+<span class="sd">        y_test: target</span>
+<span class="sd">    Output: Metrics of validation</span>
+<span class="sd">        auc, ks, log_loss, accuracy</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">)</span>
+    <span class="n">auc</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">)</span>
+    <span class="n">log_loss</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">log_loss</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="p">)</span>
+    <span class="n">ks</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">tpr</span> <span class="o">-</span> <span class="n">fpr</span><span class="p">)</span> <span class="c1"># Kolmogorov-Smirnov</span>
+    <span class="n">accu</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="o">.</span><span class="n">round</span><span class="p">())</span>
+    <span class="n">precision</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="o">.</span><span class="n">round</span><span class="p">())</span> <span class="c1"># tp / (tp + fp)</span>
+    <span class="n">recall</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="o">.</span><span class="n">round</span><span class="p">())</span> <span class="c1"># tp / (tp + fn)</span>
+    <span class="n">f1_score</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_prob</span><span class="o">.</span><span class="n">round</span><span class="p">())</span> <span class="c1"># 2 * (precision * recall) / (precision + recall)</span>
+    <span class="k">return</span> <span class="n">auc</span><span class="p">,</span> <span class="n">log_loss</span><span class="p">,</span> <span class="n">ks</span><span class="p">,</span> 
+</pre></div>
+</div>
+<p>Creating our objective function and the set of hyperparameter space.”</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">balanced</span><span class="p">,</span> <span class="n">method</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Input:</span>
+<span class="sd">        trial: trial of the test</span>
+<span class="sd">        X_train:</span>
+<span class="sd">        y_train:</span>
+<span class="sd">        X_test:</span>
+<span class="sd">        y_test:</span>
+<span class="sd">        balanced:balanced or None</span>
+<span class="sd">        method: XGBoost, CatBoost or LGBM</span>
+<span class="sd">    Output: Metrics of validation</span>
+<span class="sd">        auc, ks, log_loss</span>
+<span class="sd">        metrics_validation(y_test, y_pred)[0]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">method</span><span class="o">==</span><span class="s1">&#39;LGBM&#39;</span><span class="p">:</span>
+        <span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;num_leaves&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;num_leaves&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+                      <span class="s1">&#39;lambda_l1&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s2">&quot;lambda_l1&quot;</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;lambda_l2&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s2">&quot;lambda_l2&quot;</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;min_data_in_leaf&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;min_data_in_leaf&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+                      <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;max_depth&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span>
+                      <span class="s1">&#39;feature_fraction&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s2">&quot;feature_fraction&quot;</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+                      <span class="s1">&#39;bagging_fraction&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s2">&quot;bagging_fraction&quot;</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+                      <span class="s1">&#39;device&#39;</span><span class="p">:</span><span class="s1">&#39;gpu&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;bagging_freq&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s2">&quot;bagging_freq&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+  
+                     <span class="p">}</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">LGBMClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">param_grid</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;LGBM - Optimization using optuna&#39;</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+        
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">method</span><span class="o">==</span><span class="s1">&#39;CATBoost&#39;</span><span class="p">:</span>
+        <span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;depth&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s2">&quot;depth&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+                      <span class="s1">&#39;max_bin&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;max_bin&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">),</span>
+                      <span class="s1">&#39;min_data_in_leaf&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;min_data_in_leaf&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span>
+                      <span class="s1">&#39;l2_leaf_reg&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;l2_leaf_reg&#39;</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">log</span> <span class="o">=</span> <span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;random_seed&#39;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+                      <span class="s1">&#39;random_strength&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s2">&quot;random_strength&quot;</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;bagging_temperature&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s2">&quot;bagging_temperature&quot;</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span>
+                      <span class="s1">&#39;od_type&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_categorical</span><span class="p">(</span><span class="s2">&quot;od_type&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;IncToDec&quot;</span><span class="p">,</span> <span class="s2">&quot;Iter&quot;</span><span class="p">]),</span>
+                      <span class="s1">&#39;task_type&#39;</span><span class="p">:</span><span class="s1">&#39;GPU&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;od_wait&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s2">&quot;od_wait&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+                     <span class="p">}</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">_get_numeric_data</span><span class="p">()</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+            <span class="n">categorical_features_indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">param_grid</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CATBoost - Optimization using optuna&#39;</span><span class="p">)</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span><span class="n">cat_features</span><span class="o">=</span><span class="n">categorical_features_indices</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">param_grid</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;CATBoost - Optimization using optuna&#39;</span><span class="p">)</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+        
+    <span class="k">if</span> <span class="n">method</span><span class="o">==</span><span class="s1">&#39;XGBoost&#39;</span><span class="p">:</span>
+        <span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;max_depth&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+                      <span class="s1">&#39;min_child_weight&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s1">&#39;min_child_weight&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span>
+                      <span class="s1">&#39;gamma&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">log</span> <span class="o">=</span> <span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">log</span> <span class="o">=</span> <span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;lambda&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;lambda&#39;</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">log</span> <span class="o">=</span> <span class="kc">True</span><span class="p">),</span>
+                      <span class="s1">&#39;colsample_bytree&#39;</span><span class="p">:</span> <span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s1">&#39;colsample_bytree&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">),</span>
+                      <span class="s1">&#39;booster&#39;</span><span class="p">:</span> <span class="s1">&#39;gbtree&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;tree_method&#39;</span><span class="p">:</span><span class="s1">&#39;gpu_hist&#39;</span><span class="p">,</span>
+                      <span class="s1">&#39;random_state&#39;</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+                     <span class="p">}</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">param_grid</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;XGBoost - Optimization using optuna&#39;</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="n">auc_res</span><span class="p">,</span> <span class="n">log_loss_res</span><span class="p">,</span> <span class="n">ks_res</span> <span class="o">=</span> <span class="n">metrics_validation</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;auc:&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">auc_res</span><span class="p">),</span><span class="s1">&#39;, log_loss:&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">log_loss_res</span><span class="p">),</span><span class="s1">&#39;, ks:&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ks_res</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">metrics_validation</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Tuning the model: Here, the study will be created, and an important aspect to note is the <strong>time_max_tuning,</strong> which represents the maximum time in seconds to stop.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tuning</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">balanced</span><span class="p">,</span> <span class="n">method</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Input:</span>
+<span class="sd">        trial: </span>
+<span class="sd">        x_train:</span>
+<span class="sd">        y_train:</span>
+<span class="sd">        X_test:</span>
+<span class="sd">        y_test:</span>
+<span class="sd">        balanced:balanced or not balanced</span>
+<span class="sd">        method: XGBoost, CatBoost or LGBM</span>
+<span class="sd">    Output: Metrics of validation</span>
+<span class="sd">        auc, ks, log_loss</span>
+<span class="sd">        metrics_validation(y_test, y_pred)[0]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;maximize&#39;</span><span class="p">,</span> <span class="n">study_name</span><span class="o">=</span><span class="n">method</span><span class="o">+</span><span class="s1">&#39; Classifier&#39;</span><span class="p">)</span>
+    <span class="n">func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">trial</span><span class="p">:</span> <span class="n">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">balanced</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting the optimization&#39;</span><span class="p">)</span>
+    <span class="n">time_max_tuning</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span><span class="mi">60</span> <span class="c1"># max time in seconds to stop</span>
+    <span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">time_max_tuning</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">study</span>
+</pre></div>
+</div>
+<p>Train the model while implementing <strong>early_stopping</strong>, and then return the best model.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">balanced</span><span class="p">,</span> <span class="n">method</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Input:</span>
+<span class="sd">        X_train:</span>
+<span class="sd">        y_train:</span>
+<span class="sd">        X_test:</span>
+<span class="sd">        y_test:</span>
+<span class="sd">        balanced:balanced or None</span>
+<span class="sd">        method: XGBoost, CatBoost or LGBM</span>
+<span class="sd">    Output: predict model</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tuning&#39;</span><span class="p">)</span>
+    <span class="n">study</span> <span class="o">=</span> <span class="n">tuning</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">balanced</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">method</span><span class="o">==</span><span class="s1">&#39;LGBM&#39;</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">LGBMClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">study</span><span class="o">.</span><span class="n">best_params</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Last Fit&#39;</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)],</span>
+                 <span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span><span class="n">lightgbm</span><span class="o">.</span><span class="n">early_stopping</span><span class="p">(</span><span class="n">stopping_rounds</span><span class="o">=</span><span class="mi">100</span><span class="p">),</span> <span class="n">lightgbm</span><span class="o">.</span><span class="n">log_evaluation</span><span class="p">(</span><span class="n">period</span><span class="o">=</span><span class="mi">5000</span><span class="p">)])</span>
+    <span class="k">if</span> <span class="n">method</span><span class="o">==</span><span class="s1">&#39;CATBoost&#39;</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">CatBoostClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">study</span><span class="o">.</span><span class="n">best_params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">_get_numeric_data</span><span class="p">()</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+            <span class="n">categorical_features_indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Last Fit&#39;</span><span class="p">)</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span><span class="n">cat_features</span><span class="o">=</span><span class="n">categorical_features_indices</span><span class="p">,</span> <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)],</span>
+                 <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Last Fit&#39;</span><span class="p">)</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)],</span>
+                 <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">method</span><span class="o">==</span><span class="s1">&#39;XGBoost&#39;</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="o">**</span><span class="n">study</span><span class="o">.</span><span class="n">best_params</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Last Fit&#39;</span><span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)],</span>
+                 <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">model</span><span class="p">,</span> <span class="n">study</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">higgs_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">higgs_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">higgs_train</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">higgs_test</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">y_test</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>((10500000, 28), (500000, 28), (10500000,), (500000,))
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xgb_model</span><span class="p">,</span> <span class="n">study_lgbm</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">balanced</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;XGBoost&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat_model</span><span class="p">,</span> <span class="n">study_lgbm</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">balanced</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;CATBoost&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lgbm_model</span><span class="p">,</span> <span class="n">study_lgbm</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">balanced</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;LGBM&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>AUC in the final models</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>XGBoost</p></th>
+<th class="head"><p>CatBoost</p></th>
+<th class="head"><p>LightGBM</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Number of Trials</p></td>
+<td><p>45</p></td>
+<td><p>15</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-odd"><td><p>AUC</p></td>
+<td><p>0.8437951609576797</p></td>
+<td><p>0.8363981459518963</p></td>
+<td><p>0.8268745059988453</p></td>
+</tr>
+</tbody>
+</table>
+<section id="final-hyperparameters-in-our-models">
+<h2>Final hyperparameters in our models<a class="headerlink" href="#final-hyperparameters-in-our-models" title="Permalink to this heading">#</a></h2>
+<section id="xgboost">
+<h3>XGBoost<a class="headerlink" href="#xgboost" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">I</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">03</span> <span class="mi">20</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">08</span><span class="p">,</span><span class="mi">770</span><span class="p">]</span> <span class="n">Trial</span> <span class="mi">23</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">value</span><span class="p">:</span> <span class="mf">0.8437951609576797</span> <span class="ow">and</span> <span class="n">parameters</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.09497201157768914</span><span class="p">,</span> <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;min_child_weight&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;gamma&#39;</span><span class="p">:</span> <span class="mf">0.0044338139693267655</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">1.8619255252326368e-07</span><span class="p">,</span> <span class="s1">&#39;lambda&#39;</span><span class="p">:</span> <span class="mf">0.0003144628784949497</span><span class="p">,</span> <span class="s1">&#39;colsample_bytree&#39;</span><span class="p">:</span> <span class="mf">0.7377209265117873</span><span class="p">}</span><span class="o">.</span> <span class="n">Best</span> <span class="ow">is</span> <span class="n">trial</span> <span class="mi">23</span> <span class="k">with</span> <span class="n">value</span><span class="p">:</span> <span class="mf">0.8437951609576797</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xgb_model</span>
+</pre></div>
+</div>
+<style>#sk-container-id-2 {color: black;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>XGBClassifier(alpha=1.8619255252326368e-07, base_score=None, booster=None,
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>          callbacks=None, colsample_bylevel=None, colsample_bynode=None,
+          colsample_bytree=0.7377209265117873, early_stopping_rounds=None,
+          enable_categorical=False, eval_metric=None, feature_types=None,
+          gamma=0.0044338139693267655, gpu_id=None, grow_policy=None,
+          importance_type=None, interaction_constraints=None,
+          lambda=0.0003144628784949497, learning_rate=0.09497201157768914,
+          max_bin=None, max_cat_threshold=None, max_cat_to_onehot=None,
+          max_delta_step=None, max_depth=16, max_leaves=None,
+          min_child_weight=123, missing=nan, monotone_constraints=None,
+          n_estimators=100, n_jobs=None, num_parallel_tree=None, ...)&lt;/pre&gt;&lt;b&gt;In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. &lt;br /&gt;On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.&lt;/b&gt;&lt;/div&gt;&lt;div class=&quot;sk-container&quot; hidden&gt;&lt;div class=&quot;sk-item&quot;&gt;&lt;div class=&quot;sk-estimator sk-toggleable&quot;&gt;&lt;input class=&quot;sk-toggleable__control sk-hidden--visually&quot; id=&quot;sk-estimator-id-2&quot; type=&quot;checkbox&quot; checked&gt;&lt;label for=&quot;sk-estimator-id-2&quot; class=&quot;sk-toggleable__label sk-toggleable__label-arrow&quot;&gt;XGBClassifier&lt;/label&gt;&lt;div class=&quot;sk-toggleable__content&quot;&gt;&lt;pre&gt;XGBClassifier(alpha=1.8619255252326368e-07, base_score=None, booster=None,
+          callbacks=None, colsample_bylevel=None, colsample_bynode=None,
+          colsample_bytree=0.7377209265117873, early_stopping_rounds=None,
+          enable_categorical=False, eval_metric=None, feature_types=None,
+          gamma=0.0044338139693267655, gpu_id=None, grow_policy=None,
+          importance_type=None, interaction_constraints=None,
+          lambda=0.0003144628784949497, learning_rate=0.09497201157768914,
+          max_bin=None, max_cat_threshold=None, max_cat_to_onehot=None,
+          max_delta_step=None, max_depth=16, max_leaves=None,
+          min_child_weight=123, missing=nan, monotone_constraints=None,
+          n_estimators=100, n_jobs=None, num_parallel_tree=None, ...)&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+</pre></div>
+</div>
+</section>
+<section id="catboost">
+<h3>CatBoost<a class="headerlink" href="#catboost" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">I</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">03</span> <span class="mi">20</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">38</span><span class="p">,</span><span class="mi">660</span><span class="p">]</span> <span class="n">Trial</span> <span class="mi">13</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">value</span><span class="p">:</span> <span class="mf">0.8363981459518963</span> <span class="ow">and</span> <span class="n">parameters</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.043389728663017664</span><span class="p">,</span> <span class="s1">&#39;depth&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;max_bin&#39;</span><span class="p">:</span> <span class="mi">318</span><span class="p">,</span> <span class="s1">&#39;min_data_in_leaf&#39;</span><span class="p">:</span> <span class="mi">39</span><span class="p">,</span> <span class="s1">&#39;l2_leaf_reg&#39;</span><span class="p">:</span> <span class="mf">0.0018658114257615013</span><span class="p">,</span> <span class="s1">&#39;random_strength&#39;</span><span class="p">:</span> <span class="mf">4.627506435088902e-07</span><span class="p">,</span> <span class="s1">&#39;bagging_temperature&#39;</span><span class="p">:</span> <span class="mf">0.46427970539192914</span><span class="p">,</span> <span class="s1">&#39;od_type&#39;</span><span class="p">:</span> <span class="s1">&#39;IncToDec&#39;</span><span class="p">,</span> <span class="s1">&#39;od_wait&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span><span class="o">.</span> <span class="n">Best</span> <span class="ow">is</span> <span class="n">trial</span> <span class="mi">13</span> <span class="k">with</span> <span class="n">value</span><span class="p">:</span> <span class="mf">0.8363981459518963</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat_model</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;learning_rate&#39;: 0.043389728663017664,
+ &#39;depth&#39;: 10,
+ &#39;l2_leaf_reg&#39;: 0.0018658114257615013,
+ &#39;od_wait&#39;: 35,
+ &#39;od_type&#39;: &#39;IncToDec&#39;,
+ &#39;random_strength&#39;: 4.627506435088902e-07,
+ &#39;bagging_temperature&#39;: 0.46427970539192914,
+ &#39;max_bin&#39;: 318,
+ &#39;min_data_in_leaf&#39;: 39}
+</pre></div>
+</div>
+</section>
+<section id="lightgbm">
+<h3>LightGBM<a class="headerlink" href="#lightgbm" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">I</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">03</span> <span class="mi">21</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span><span class="mi">366</span><span class="p">]</span> <span class="n">Trial</span> <span class="mi">29</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">value</span><span class="p">:</span> <span class="mf">0.8268745059988453</span> <span class="ow">and</span> <span class="n">parameters</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.09805228364360181</span><span class="p">,</span> <span class="s1">&#39;num_leaves&#39;</span><span class="p">:</span> <span class="mi">165</span><span class="p">,</span> <span class="s1">&#39;lambda_l1&#39;</span><span class="p">:</span> <span class="mf">5.131359320461935</span><span class="p">,</span> <span class="s1">&#39;lambda_l2&#39;</span><span class="p">:</span> <span class="mf">1.712267871355936</span><span class="p">,</span> <span class="s1">&#39;min_data_in_leaf&#39;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span> <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="mi">41</span><span class="p">,</span> <span class="s1">&#39;feature_fraction&#39;</span><span class="p">:</span> <span class="mf">0.7265862458914822</span><span class="p">,</span> <span class="s1">&#39;bagging_fraction&#39;</span><span class="p">:</span> <span class="mf">0.6554658706889013</span><span class="p">,</span> <span class="s1">&#39;bagging_freq&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span><span class="o">.</span> <span class="n">Best</span> <span class="ow">is</span> <span class="n">trial</span> <span class="mi">29</span> <span class="k">with</span> <span class="n">value</span><span class="p">:</span> <span class="mf">0.8268745059988453</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lgbm_model</span>
+</pre></div>
+</div>
+<style>#sk-container-id-3 {color: black;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LGBMClassifier(bagging_fraction=0.6554658706889013, bagging_freq=3,
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>           feature_fraction=0.7265862458914822, lambda_l1=5.131359320461935,
+           lambda_l2=1.712267871355936, learning_rate=0.09805228364360181,
+           max_depth=41, min_data_in_leaf=17, num_leaves=165)&lt;/pre&gt;&lt;b&gt;In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. &lt;br /&gt;On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.&lt;/b&gt;&lt;/div&gt;&lt;div class=&quot;sk-container&quot; hidden&gt;&lt;div class=&quot;sk-item&quot;&gt;&lt;div class=&quot;sk-estimator sk-toggleable&quot;&gt;&lt;input class=&quot;sk-toggleable__control sk-hidden--visually&quot; id=&quot;sk-estimator-id-3&quot; type=&quot;checkbox&quot; checked&gt;&lt;label for=&quot;sk-estimator-id-3&quot; class=&quot;sk-toggleable__label sk-toggleable__label-arrow&quot;&gt;LGBMClassifier&lt;/label&gt;&lt;div class=&quot;sk-toggleable__content&quot;&gt;&lt;pre&gt;LGBMClassifier(bagging_fraction=0.6554658706889013, bagging_freq=3,
+           feature_fraction=0.7265862458914822, lambda_l1=5.131359320461935,
+           lambda_l2=1.712267871355936, learning_rate=0.09805228364360181,
+           max_depth=41, min_data_in_leaf=17, num_leaves=165)&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="shap-in-xgboost-catboost-lightgbm">
+<h1>SHAP in XGBoost, CatBoost, LightGBM<a class="headerlink" href="#shap-in-xgboost-catboost-lightgbm" title="Permalink to this heading">#</a></h1>
+<section id="shap-using-cpu">
+<h2>SHAP using CPU<a class="headerlink" href="#shap-using-cpu" title="Permalink to this heading">#</a></h2>
+<p>I have to use SHAP on the test dataset because the training dataset was too heavy.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shap</span>
+<span class="n">time_cpu_shap</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CPU&#39;</span><span class="p">]</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">TreeExplainer</span><span class="p">(</span><span class="n">xgb_model</span><span class="p">)</span>
+<span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">time_cpu_shap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+<span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_81_0.png?raw=true" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shap</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">TreeExplainer</span><span class="p">(</span><span class="n">cat_model</span><span class="p">)</span>
+<span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">time_cpu_shap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+<span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_82_0.png?raw=true" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shap</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">TreeExplainer</span><span class="p">(</span><span class="n">lgbm_model</span><span class="p">)</span>
+<span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">time_cpu_shap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+<span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">X_test</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+</pre></div>
+</div>
+<p><img alt="png" src="https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/2023-10-01-catboost-lgbm-xgboost/output_83_1.png?raw=true" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_cpu_shap</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;CPU&#39;, 4620.933531924995, 32.60655866500747, 113.2479361500009]
+</pre></div>
+</div>
+</section>
+<section id="shap-using-gpu">
+<h2>SHAP using GPU<a class="headerlink" href="#shap-using-gpu" title="Permalink to this heading">#</a></h2>
+<p>I have tried to run SHAP on my GPU, but I’m encountering problems with my CUDA version, and currently, I believe it’s a common issue with my modern GPU. <a class="reference external" href="https://github.com/shap/shap/issues/3251">BUG: No GPU Support for Modern CUDA</a>.</p>
+<p>But you can try to run this code, after installing <code class="docutils literal notranslate"><span class="pre">nvcc</span></code>. See <a class="reference external" href="https://shap.readthedocs.io/en/latest/example_notebooks/api_examples/explainers/GPUTree.html">GPUTree</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">shap</span>
+<span class="n">time_gpu_shap</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GPU&#39;</span><span class="p">]</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">explainers</span><span class="o">.</span><span class="n">GPUTree</span><span class="p">(</span><span class="n">xgb_model</span><span class="p">)</span>
+<span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">time_gpu_shap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+<span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">explainers</span><span class="o">.</span><span class="n">GPUTree</span><span class="p">(</span><span class="n">cat_model</span><span class="p">)</span>
+<span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">time_gpu_shap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+<span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">explainer</span> <span class="o">=</span> <span class="n">shap</span><span class="o">.</span><span class="n">explainers</span><span class="o">.</span><span class="n">GPUTree</span><span class="p">(</span><span class="n">lgbm_model</span><span class="p">)</span>
+<span class="n">shap_values</span> <span class="o">=</span> <span class="n">explainer</span><span class="o">.</span><span class="n">shap_values</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">stop</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">default_timer</span><span class="p">()</span>
+<span class="n">time_gpu_shap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stop</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>
+<span class="n">shap</span><span class="o">.</span><span class="n">summary_plot</span><span class="p">(</span><span class="n">shap_values</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">X_test</span><span class="p">,</span><span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bibliography">
+<h1>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this heading">#</a></h1>
+<p>You can find all files in <a class="reference external" href="https://github.com/joaomh/xgboost-catboost-lgbm">this repository</a></p>
+<p>References, and, of course, you can access the documentation for each algorithm.</p>
+<p>[1] - <a class="reference external" href="https://cseweb.ucsd.edu/~yfreund/papers/IntroToBoosting.pdf">Schapire, Robert E(1999). A Short Introduction to Boosting</a></p>
+<p>[2] - <a class="reference external" href="https://hastie.su.domains/Papers/ESLII.pdf">HASTIE, T.; TIBSHIRANI, R.; FRIEDMAN, J. (2009). The Elements of Statistical Learning</a></p>
+<p>[3] - <a class="reference external" href="https://jerryfriedman.su.domains/ftp/trebst.pdf">Jerome H. Friedman (2001). GREEDY FUNCTION APPROXIMATION:A GRADIENT BOOSTING MACHINE</a></p>
+<p>[4] - <a class="reference external" href="https://arxiv.org/abs/1603.02754">Tianqi Chen, Carlos Guestrin (2016).XGBoost: {A} Scalable Tree Boosting System</a></p>
+<p>[5] - <a class="reference external" href="https://arxiv.org/abs/1706.09516">Anna Veronika Dorogush, Andrey Gulin, Gleb Gusev, Nikita Kazeev, Liudmila Ostroumova Prokhorenkova, Aleksandr Vorobev (2017).CatBoost: unbiased boosting with categorical features</a></p>
+<p>[6] - <a class="reference external" href="https://proceedings.neurips.cc/paper_files/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf">Ke, Guolin and Meng, Qi and Finley, Thomas and Wang, Taifeng and Chen, Wei and Ma, Weidong and Ye, Qiwei and Liu, Tie-Yan (2017).Lightgbm: A highly efficient gradient boosting decision tree</a></p>
+<p>[7] - <a class="reference external" href="https://www.youtube.com/watch?v=usdEWSDisS0">Anna Veronika Dorogush: Mastering gradient boosting with CatBoost</a></p>
+<p>[8] - <a class="reference external" href="https://www.youtube.com/watch?v=qGsHlvE8KZM">Pedro Tabacof Unlocking the Power of Gradient-Boosted Trees</a></p>
+<p>[9] - <a class="reference external" href="https://bdta.abcd.usp.br/item/003122385">Pinheiro, J., &amp; Becker, M.. (2023). Um estudo sobre algoritmos de Boosting e a otimização de hiperparâmetros utilizando optuna.</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/projects/2023-10-01-catboost-lgbm-xgboost"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../projects.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Projects</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../2023-09-20-banking-risk-predict/2023-09-20-banking-risk-predict.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tables of Content:</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tables of Content:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble">Ensemble</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adaboost">AdaBoost</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gbms">GBMs</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost-vs-catboost-vs-lightgbm">XGBoost vs. CatBoost vs. LightGBM</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tree-symmetry">Tree Symmetry</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#splitting-method">Splitting Method</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prevent-overfitting">Prevent Overfitting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-tuning">Hyperparameter Tuning</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#models-performance-cpu-vs-gpu">Models Performance CPU vs. GPU</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epsilon">Epsilon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#higgs">Higgs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breast-cancer">Breast Cancer</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optuna">Optuna</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-hyperparameters-in-our-models">Final hyperparameters in our models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xgboost">XGBoost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catboost">CatBoost</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lightgbm">LightGBM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-in-xgboost-catboost-lightgbm">SHAP in XGBoost, CatBoost, LightGBM</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-using-cpu">SHAP using CPU</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shap-using-gpu">SHAP using GPU</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliography">Bibliography</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By João Pinheiro
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
