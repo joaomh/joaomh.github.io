@@ -1,28 +1,5 @@
----
-layout: post
-title: "Credit Risk Prediction"
-featured-img: credit-risk
-mathjax: true
-categories: [Machine Learning, Data Science]
-summary: This is a German credit risk dataset that can be found on Kaggle. My goal is to create a predictive model, use this model to generate a score for each client, and ultimately classify clients into risk profiles, differentiating between the riskiest and least risky
----
+# Credit Risk Prediction
 This is a German credit risk dataset that can be found on Kaggle [German Risk](https://www.kaggle.com/datasets/kabure/german-credit-data-with-risk). My goal is to create a predictive model, use this model to generate a score for each client, and ultimately classify clients into risk profiles, differentiating between the riskiest and least risky
-
-# Tables of Content:
-
-**1. [Introduction](#Introduction)**
-
-**2. [Dataset](#Dataset)** 
-
-**3. [EDA](#EDA)**
-
-**5. [Preprocess](#Preprocessing)** 
-
-**6.  [Model](#Training)** 
-
-**7.  [Hyperparameter Optimization using Optuna](#Hyperparameter)**
-
-**8. [Ranking the final model](#Ranking)**
 
 # Introduction
 Context
@@ -370,7 +347,7 @@ fig = dict(data=data, layout=layout)
 
 py.iplot(fig, filename='custom-sized-subplot-with-subplot-titles')
 ```
-![Age](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/age.png?raw=true)
+![Age](age.png)
 We can see that people with Bad Credit tend to more youth
 
 ```python
@@ -407,7 +384,7 @@ fig = dict(data=data, layout=layout)
 
 py.iplot(fig, filename='custom-sized-subplot-with-subplot-titles')
 ```
-![House](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/housing.png?raw=true)
+![House](housing.png)
 People who own a house have better credit.
 
 
@@ -445,7 +422,7 @@ fig = dict(data=data, layout=layout)
 
 py.iplot(fig, filename='custom-sized-subplot-with-subplot-titles')
 ```
-![Saving](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/saving.png?raw=true)
+![Saving](saving.png)
 People with more savings accounts also have better credit
 
 ```
@@ -482,7 +459,7 @@ fig = dict(data=data, layout=layout)
 
 py.iplot(fig, filename='custom-sized-subplot-with-subplot-titles')
 ```
-![Checking](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/checking.png?raw=true)
+![Checking](checking.png)
 
 The same here, people with more checking account has better credit
 
@@ -520,7 +497,7 @@ fig = dict(data=data, layout=layout)
 
 py.iplot(fig, filename='custom-sized-subplot-with-subplot-titles')
 ```
-![Credit](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/credit_amount.png?raw=true)
+![Credit](credit_amount.png)
 People with more than 4k in credit amount have worse credit than people with less
 
 ```python
@@ -557,7 +534,7 @@ fig = dict(data=data, layout=layout)
 
 py.iplot(fig, filename='custom-sized-subplot-with-subplot-titles')
 ```
-![Purpose](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/purpose.png?raw=true)
+![Purpose](purpose.png)
 People that the purpose is to buy radio/TV have a better credit
 
 Now let's see the distribution using two variables
@@ -591,7 +568,7 @@ fig = go.Figure(data=data, layout=layout)
 
 py.iplot(fig, filename='box-age-cat')
 ```
-![Credit](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/amount_checking.png?raw=true)
+![Credit](amount_checking.png)
 The credit amount is also less in rich people (checking account), even in those bad credit
 
 ```python
@@ -624,7 +601,7 @@ fig = go.Figure(data=data, layout=layout)
 
 py.iplot(fig, filename='box-age-cat')
 ```
-![Credit](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/amount_job.png?raw=true)
+![Credit](amount_job.png)
 Unskilled and non-residents with bad credit have more credit amount than others
 
 # Preprocessing
@@ -1309,7 +1286,7 @@ plt.show()
 
 
     
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_60_0.png?raw=true)
+![png](output_60_0.png)
     
 
 
@@ -1407,7 +1384,7 @@ fig = go.Figure(data=data, layout=layout)
 
 py.iplot(fig, filename='box-age-cat')
 ```
-![Models](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/models_train.png?raw=true)
+![Models](models_train.png)
 
 The best models were RandomForest and LGBM, we are going to train this model and use Optuna for hyperparameter optimization.
 
@@ -1656,7 +1633,7 @@ ax.set_title('Confusion Matrix')
 ```
 
 Confusion Matrix in LGBM
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_77_1.png?raw=true)
+![png](output_77_1.png)
     
 
 
@@ -1674,7 +1651,7 @@ plt.title('ROC Curve')
 plt.show()
 ```
 
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_78_0.png?raw=true)
+![png](output_78_0.png)
     
 
 ```python
@@ -1733,7 +1710,7 @@ ax.set_title('Confusion Matrix')
 
 
 Confusion Matrix in RandomForest
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_83_1.png?raw=true)
+![png](output_83_1.png)
     
 
 ```python
@@ -1749,7 +1726,7 @@ plt.title('ROC Curve')
 plt.show()
 ```
     
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_84_0.png?raw=true)
+![png](output_84_0.png)
     
 
 LGBM model has a better performance after the optimization using Optuna, so we'll this model as our final model.
@@ -1766,7 +1743,7 @@ shap.summary_plot(shap_values[1], X_train,show=False)
 
 
 SHAP results in LGBM
-![png](https://github.com/joaomh/joaomh.github.io/blob/main/assets/post_img/german-credit-risk/output_88_1.png?raw=true)    
+![png](output_88_1.png)    
 
 ```python
 df_test = pd.concat([X_test, y_test],axis=1)

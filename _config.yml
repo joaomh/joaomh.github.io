@@ -19,15 +19,15 @@ latex:
 # Add a bibtex file so that we can create citations
 # In _config.yml
 # Bibliography settings
-bibtex_bibfiles:
-  - references.bib
-sphinx:
-  config:
-    bibtex_reference_style: author_year
+# bibtex_bibfiles:
+#   - references.bib
+# sphinx:
+#   config:
+#     bibtex_reference_style: author_year
 
 # Information about where the book exists on the web
 repository:
-  url: https://joaomh.github.io/ # Online location of your book
+  url: https://github.com/joaomh/joaomh.github.io # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
