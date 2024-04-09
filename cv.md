@@ -18,12 +18,12 @@
 * Skills: Python, Data Science, Data Analysis, Artificial intelligence, Machine Learning, scikit-learn, Pandas, NumPy, SciPy, matplotlib, Optuna, Git, Github, Linux, Unix, Hadoop, SQL, SAS, Mathematics, Calculus, Statistics, Communication, Presentations, Product Analytics, Public Speaking.
 
 # Education and Honors
-## Master of Science in Mechanical Engineering (Robotics, AI), University of Sao Paulo - GPA A/A, JULY 2023 - PRESENT
+## Master of Science in Mechanical Engineering (Robotics, AI), University of Sao Paulo - GPA 4.0, JULY 2023 - PRESENT
 * The project is ML techniques to be used in robotic-assisted surgery using computer vision, natural language processing (NLP), and speech recognition.
 * Deploy the models and architecture using AWS and manage the project with 5 undergraduate students using Agile techniques.
 * Relevant Coursework: Engineering Optimization, Educational Preparation.
 
-## Bachelor of Science in Mechatronics Engineering, University of Sao Paulo - GPA 7.9/10, FEBRUARY 2016 - DECEMBER 2022
+## Bachelor in Mechatronics Engineering, University of Sao Paulo - GPA 3.12, FEBRUARY 2016 - DECEMBER 2022
 * Three years of scientific initiation projects with a scholarship, and teaching assistant for the Calculus and Control Systems for more than 50 students each.
 * Coordinator of the USP clothing campaign, increased the budget by 400%, and more than 55k pieces of clothing were donated.
 * Designed the chassis for the Electric Formula SAE Team and earned the 5th position in the national competition.
