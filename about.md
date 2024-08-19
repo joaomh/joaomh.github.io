@@ -38,7 +38,7 @@ bank products, and their target variable, and reply to the metrics in developing
 * Conducted meetings with business teams to gather requirements and deliver solutions tailored to meet business demands.
 
 ## Education and Honors
-### Master of Science, M.Sc - University of Sao Paulo - USP | GPA 3.9
+### Master of Science, MSc - University of Sao Paulo - USP | GPA 3.9
 ##### 07/2023 - Current
 * Mechanical Engineering with a focus on Computer Vision, Machine Learning, Mechatronics, supported by a research scholarship.
 * Leading research on projects with a budget exceeding R$48 million acting as Specialist in Machine Learning, Computer Vision and Cloud
