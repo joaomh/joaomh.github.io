@@ -1,5 +1,12 @@
 # João Pinheiro
-Data Engineer with over 3 years of experience in the technology and banking sectors, specializing in Data Science, Machine Learning, Data Engineering and software development. Holding an engineering degree from the University of São Paulo and currently pursuing a Master’s degree in Artificial Intelligence. Recognized for strong soft skills, including creativity, rapid learning, and problem-solving abilities.
+Professional with 4 years of experience in Data Science, Data Engineering, Computer Vision, and Artificial Intelligence within the banking and technology sectors. Specialist in Python, Machine Learning, Big Data, and Data Engineering, with hands-on experience in projects leveraging Spark, AWS, and Cloud Computing tools. Proven ability to transform data into actionable insights and deliver impactful business solutions.
+
+Conducting research in robotics and Artificial Intelligence at USP, mentoring students, and leading projects with budgets exceeding R$48 million. Published research articles in international journals.
+
+I also maintain a blog showcasing my Data Science and Machine Learning portfolio: joaomh.github.io. Additionally, I run a YouTube channel, "2001 Engenharia," where I create educational programming content: youtube.com/2001engenharia.
+
+Skills: 
+Python | SQL | Scala | Julia | MATLAB | C++ | LaTeX | Data Science | Machine Learning | Computer Vision | Artificial Intelligence | Data Analysis | Data Engineering | Big Data | ETL | Software Development | Cloud Computing | Research | Calculus | Statistics | Mathematics | Optimization | Git | GitHub | Linux | AWS | EMR | Glue | Lambda | Athena | S3 | SageMaker | Step Function | CI/CD | CloudFormation | Terraform | CloudWatch | Pandas | TensorFlow | PyTorch | scikit-learn | Keras | OpenCV | Optuna | NumPy | SciPy | PySpark | Spark | Hadoop | Iceberg | Hive | Presto
 
 # Projects
 Here I have some of my projects that I am working on or had worked on in the past.
@@ -10,8 +17,6 @@ Here I have some of my projects that I am working on or had worked on in the pas
 ## Books
 ### [An Introduction to Machine Learning](https://joaomh.github.io/ml-book/intro.html)
 An online book built with Jupyter Book that covers the main topics in machine learning with projects.
-### [An Introduction to Amazon Web Service](https://joaomh.github.io/aws-book/intro.html)
-An online book built with Jupyter Book that covers the basics of AWS services and how to configure some of the products with projects.
 ## YouTube Channel 
 ### [2001 Engenharia](https://www.youtube.com/@2001Engenharia)
 YouTube channel that aims to teach courses in programming, data science, machine learning and engineering.
