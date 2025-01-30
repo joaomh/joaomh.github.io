@@ -4,6 +4,5 @@ Conducting research in robotics and Artificial Intelligence at USP, mentoring st
 
 I also maintain a blog showcasing my Data Science and Machine Learning portfolio: joaomh.github.io. Additionally, I run a YouTube channel, "2001 Engenharia," where I create educational programming content: youtube.com/2001engenharia.
 
-
 Skills: 
 Python | SQL | Scala | Julia | MATLAB | C++ | LaTeX | Data Science | Machine Learning | Computer Vision | Artificial Intelligence | Data Analysis | Data Engineering | Big Data | ETL | Software Development | Cloud Computing | Research | Calculus | Statistics | Mathematics | Optimization | Git | GitHub | Linux | AWS | EMR | Glue | Lambda | Athena | S3 | SageMaker | Step Function | CI/CD | CloudFormation | Terraform | CloudWatch | Pandas | TensorFlow | PyTorch | scikit-learn | Keras | OpenCV | Optuna | NumPy | SciPy | PySpark | Spark | Hadoop | Iceberg | Hive | Presto
