@@ -1,54 +1,50 @@
-name: deploy-book
+name: deploy-website
 
-# Trigger the workflow on push to the main branch
+# Only run this when the master branch changes
 on:
+  pull_request:
   push:
     branches:
-      - main
+    - main
+  workflow_dispatch:
 
-# Define the job to deploy the book
+# This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
     steps:
-      # Checkout the repository
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - uses: actions/checkout@v2
 
-      # Set up Python 3.11
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
+    # Install dependencies
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.12' 
 
-      # Install dependencies from requirements.txt
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        version: "latest"
 
-      # (Optional) Cache executed notebooks
-      - name: Cache executed notebooks
-        uses: actions/cache@v4
-        with:
-          path: _build/.jupyter_cache
-          key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
+    - name: Install dependencies
+      run: |
+        uv pip install --system -r requirements.txt
+        uv pip install --system -r execute-requirements.txt
 
-      # Build the Jupyter Book
-      - name: Build the book
-        run: |
-          jupyter-book build .
+    # Build the book
+    - name: Build the site
+      run: |
+        myst build --html
 
-      # Upload the built HTML as an artifact
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Use the latest version (e.g., v3)
-        with:
-          path: "_build/html"
+    # Move RSS feeds to output folder
+    - name: Move RSS feeds
+      run: |
+        cp atom.xml _build/html/atom.xml
+        cp rss.xml _build/html/rss.xml
 
-      # Deploy the book to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v3  # Use the latest version (e.g., v3)
+    # If we've pushed to main, push the book's HTML to github-pages
+    - if: ${{ github.ref == 'refs/heads/main' }}
+      name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.9.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_build/html
