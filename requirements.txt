@@ -1,3 +1,10 @@
 jupyter-book
 matplotlib
 numpy
+ipywidgets
+jupyterlab
+matplotlib
+pandas
+pandas_datareader
+scipy
+seaborn
