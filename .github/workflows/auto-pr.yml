@@ -1,0 +1,49 @@
+name: Auto Create Pull Request
+
+on:
+  push:
+    branches:
+      - develop # This workflow runs when changes are pushed to the 'develop' branch.
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest # The job will run on a fresh Ubuntu virtual machine.
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # Action to check out your repository code.
+        with:
+          # This token is required for the 'create-pull-request' action to push changes
+          # and create a pull request. The default GITHUB_TOKEN has limited permissions.
+          # It's recommended to create a dedicated Personal Access Token (PAT) with
+          # 'repo' scope and store it as a GitHub secret (e.g., 'PAT_TOKEN').
+          token: ${{ secrets.GITHUB_TOKEN }} # Using the default GITHUB_TOKEN for simplicity.
+                                             # For more robust scenarios (e.g., if the PR needs to trigger other workflows),
+                                             # consider using a PAT with 'repo' scope and storing it as a secret.
+
+      - name: Create Pull Request
+        id: cpr # Assign an ID to this step to reference its outputs.
+        uses: peter-evans/create-pull-request@v6 # Action to create a pull request.
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Use the same token for creating the PR.
+          commit-message: 'feat: Auto-PR from develop' # Commit message for the PR branch (if new commits are made).
+          title: 'Merge develop into main' # Title of the pull request.
+          body: | # Body of the pull request, supporting multi-line markdown.
+            This is an automated pull request to merge the `develop` branch
+            into the `main` branch.
+
+            Please review the changes and merge if everything looks good.
+          branch: develop # The branch from which the pull request will be created (head branch).
+          base: main # The branch to which the pull request will be merged (base branch).
+          delete-branch: false # Set to true if you want the 'develop' branch to be deleted after merging the PR.
+          labels: | # Labels to apply to the pull request.
+            automation
+            feature
+          assignees: your-github-username # Optional: Assign the PR to specific users (replace with your GitHub username or team).
+          reviewers: your-github-username # Optional: Request reviews from specific users (replace with your GitHub username or team).
+          draft: false # Set to true if you want the PR to be created as a draft.
+
+      - name: Check for PR creation
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request #${{ steps.cpr.outputs.pull-request-number }} created: ${{ steps.cpr.outputs.pull-request-url }}"
