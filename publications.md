@@ -6,7 +6,9 @@ This page lists some major publications I have been involved with.
 - 👉 [Google Scholar page](https://scholar.google.com/citations?user=bXATl38AAAAJ&hl=pt-BR&oi=sra)
 
 
-- Herrera Pinheiro, J. M., & Becker, M. . (2024). Breast Cancer Classification Using Gradient Boosting Algorithms Focusing on Reducing the False Negative and SHAP for Explainability. Inteligencia Artificial, 28(75), 63–80. https://doi.org/10.4114/intartif.vol28iss75pp63-8
+- [The Impact of Feature Scaling In Machine Learning: Effects on Regression and Classification Tasks](https://arxiv.org/abs/2506.08274)
+- [A Leaf-Level Dataset for Soybean-Cotton Detection and Segmentation](https://arxiv.org/abs/2503.01605)
+- [Breast Cancer Classification Using Gradient Boosting Algorithms Focusing on Reducing the False Negative and SHAP for Explainability](https://journal.iberamia.org/index.php/intartif/article/view/1637)
 
 ```{include} __auto__/publications.txt
 ```

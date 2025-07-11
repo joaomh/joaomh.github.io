@@ -7,8 +7,7 @@ Here I have some of my projects that I am working on or had worked on in the pas
 ## Books
 ### [An Introduction to Machine Learning](https://joaomh.github.io/ml-book/intro.html)
 An online book built with Jupyter Book that covers the main topics in machine learning with projects.
-### [An Introduction to Amazon Web Service](https://joaomh.github.io/aws-book/intro.html)
-An online book built with Jupyter Book that covers the basics of AWS services and how to configure some of the products with projects.
+
 ## YouTube Channel 
 ### [2001 Engenharia](https://www.youtube.com/@2001Engenharia)
 YouTube channel that aims to teach courses in programming, data science, machine learning and engineering.
