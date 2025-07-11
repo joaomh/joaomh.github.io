@@ -1,4 +1,4 @@
-# Published
+# Publications
 
 This page lists some major publications I have been involved with.
 
