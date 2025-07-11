@@ -1,8 +1,8 @@
-Professional with 4 years of experience in Data Science, Data Engineering, Computer Vision, and Artificial Intelligence within the banking and technology sectors. Specialist in Python, Machine Learning, Big Data, and Data Engineering, with hands-on experience in projects leveraging Spark, AWS, and Cloud Computing tools. Proven ability to transform data into actionable insights and deliver impactful business solutions.
+I’m a Data Science and Artificial Intelligence professional with over 4 years of experience working across the banking and technology sectors, specializing in Data Engineering, Computer Vision, and Machine Learning. I’m passionate about turning complex data into actionable insights and building scalable, high-impact solutions using technologies like Python, Spark, and AWS.
 
-Conducting research in robotics and Artificial Intelligence at USP, mentoring students, and leading projects with budgets exceeding R$48 million. Published research articles in international journals.
+Currently, I’m a researcher in Machine Learning and Computer Vision at the University of São Paulo (USP), where I lead innovation projects with budgets exceeding $10 million and mentor students on applied research. I also teach undergraduate courses in Computer Vision and have guided over 30 students in both academic and practical projects.
 
-I also maintain a blog showcasing my Data Science and Machine Learning portfolio: joaomh.github.io. Additionally, I run a YouTube channel, "2001 Engenharia," where I create educational programming content: youtube.com/2001engenharia.
+In addition to my research and industry work, I’m an active science communicator. I produce educational content for my YouTube channel 2001 Engenharia: https://www.youtube.com/2001engenharia
+I'm the author of An Introduction to Machine Learning, a free and open-source book available here: https://joaomh.github.io/ml-book/intro.html
 
-Skills: 
-Python | SQL | Scala | Julia | MATLAB | C++ | LaTeX | Data Science | Machine Learning | Computer Vision | Artificial Intelligence | Data Analysis | Data Engineering | Big Data | ETL | Software Development | Cloud Computing | Research | Calculus | Statistics | Mathematics | Optimization | Git | GitHub | Linux | AWS | EMR | Glue | Lambda | Athena | S3 | SageMaker | Step Function | CI/CD | CloudFormation | Terraform | CloudWatch | Pandas | TensorFlow | PyTorch | scikit-learn | Keras | OpenCV | Optuna | NumPy | SciPy | PySpark | Spark | Hadoop | Iceberg | Hive | Presto
+I'm always open to collaborations in AI, data-driven innovation, and science education.
