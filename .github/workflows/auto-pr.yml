@@ -1,4 +1,4 @@
-name: Auto Create Pull Request
+name: auto-pull-request
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
           labels: | # Labels to apply to the pull request.
             automation
             feature
-          assignees: your-github-username # Optional: Assign the PR to specific users (replace with your GitHub username or team).
+          assignees: joaomh # Optional: Assign the PR to specific users (replace with your GitHub username or team).
           reviewers: your-github-username # Optional: Request reviews from specific users (replace with your GitHub username or team).
           draft: false # Set to true if you want the PR to be created as a draft.
 
