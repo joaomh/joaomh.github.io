@@ -35,7 +35,8 @@ data-driven culture within the bank.
 - Automated data and machine learning pipelines using Python, PySpark, reducing operational effort by 75%.
 
 # Education
-- **University of Sao Paulo**, Machine Learning, Computer Vision  - **MSc**, 2026
-- **University of Sao Paulo**, Software Engineering - **MBA**, 2026
-- **Virtual University of the State of São Paulo**, Education - **Specialization**, 2026
+- **University of Sao Paulo**, Electrical Engineering, Machine Learning, Computer Science  - **PhD**, 2029
+- **University of Sao Paulo**, Mechanical Engineering, Computer Vision, Robotics - **MSc**, 2026
+- **University of Sao Paulo**, Software Engineering, Computer Science - **MBA**, 2026
+- **Virtual University of the State of São Paulo**, Education, Pedagogy - **Specialization**, 2026
 - **University of Sao Paulo**, Mechatronics Engineering - **BE**, 2022
