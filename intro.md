@@ -9,10 +9,3 @@ Beyond research and industry, I am an active science communicator. I produce edu
 
 ```{include} projects/projects.md
 :relative:
-
-
-```{include} publications.md
-:relative:
-
-```{include} cv.md
-:relative:

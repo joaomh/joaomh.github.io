@@ -1,31 +1,41 @@
 # CV
 
 # Professional Experience 
+## Cielo, Remote — Senior Data Scientist
+### 01/2025 - Current
 
-## Itau Unibanco, Remote — Data Engineer, APRIL 2023 - PRESENT 
+- Led the development of a cloud data infrastructure on AWS and Databricks using with Git to automate
+deployments and achieving a 67% improvement in data processing speed.
+- Reduced AWS costs by 75% through monitoring and optimization saving R$1.3M annually.
+- Provided technical leadership in data productization, driving operational KPIs improvement by over 45%.
+- Improved ETL process documentation in AWS by 50% through the use of Git for version control.
+- Implemented machine learning models to optimize the customer service journey, increase KPIs by 45%.
+- Utilized AWS Athena to analyze customer data, which contributed to a 10-point increase in NPS
+- Developed PySpark data pipelines and Data Quality solutions, improving daily indicators by 120%.
+- Promoted best practices in data engineering and machine learning by leading internal technical training.
 
-* Automation of manual loads with a 90% time reduction.
-* Getting an increase in performance by 51% and resulting in 21% annual cost savings by changing the architecture in Spark.
-* Dealing with large financial datasets with billions of data (the bank has more than 70M clients) and more than 57TB of data to democratize data.
-* Skills: Python, SQL, Spark, AWS, Glue, EMR, Athena, Linux, Unix, Git, GitHub, Data Analysis, PySpark, Pandas.
+## Itau Unibanco, Remote — Data Engineering
+### 04/2023 - 01/2025
+- Led the migration of a legacy system to a modern AWS data platform, engineering an infrastructure with
+EMR, Lambda, Glue, and Step Functions,implementing CI/CD practices that resulted in a 65% reduction in
+processing time and annual savings of R$15.7M.
+- Automated manual table loads, reducing load times by 95% using Glue, Step Function and Lambda.
+- Integrated data environments into the public cloud using Linux and SQL, cutting legacy table usage by 93%.
+- Enhanced data quality with scalable solutions using Glue, PySpark, improving integrity and control by 375%.
+- Developed and maintained ETL pipelines for 270+ tables using Glue, EMR, Lambda and Step Functions.
+- Acted as a technical reference for data architecture design, contributing to the development of a strong
+data-driven culture within the bank.
 
-## Itau Unibanco, Remote — Data Scientist, JUNE 2021 - APRIL 2023
-* Creating Machine learning models for the CRM area, understanding the business problem to be solved, and turning in an ML problem.
-* Grown by 257% product conversion through predictive models and earning an annual R$50M increase.
-* Improved by 340% input and output controls for predictive models and segmentations. 
-* Increased by 290% the control performance of predictive models (using classification metrics, KS, and Gini), understand more than 30 bank products, and their target variable, and reply to the metrics in developing the machine learning models.
-* Using Python for Automation (Queries in SQL, Hadoop, and SAS), obtain a reduction of 22% in the time spent on this task.
-* Skills: Python, Data Science, Data Analysis, Artificial intelligence, Machine Learning, scikit-learn, Pandas, NumPy, SciPy, matplotlib, Optuna, Git, Github, Linux, Unix, Hadoop, SQL, SAS, Mathematics, Calculus, Statistics, Communication, Presentations, Product Analytics, Public Speaking.
+## Itau Unibanco, Remote — Data Scientist,
+### 06/2021 - 04/2023
+- Increased product conversion by 250% through classification models, generating an annual R$50M in revenue.
+- Implemented clustering techniques, resulting in a 20% improvement in campaign personalization.
+- Performed bias-variance analysis, model explainability, and overfitting mitigation for credit models.
+- Developed and maintained ETL pipelines for 15+ machine learning models using EMR,Glue and SageMaker.
+- Automated data and machine learning pipelines using Python, PySpark, reducing operational effort by 75%.
 
-# Education and Honors
-## Master of Science in Mechanical Engineering (Robotics, AI), University of Sao Paulo - GPA A/A, JULY 2023 - PRESENT
-* The project is ML techniques to be used in robotic-assisted surgery using computer vision, natural language processing (NLP), and speech recognition.
-* Deploy the models and architecture using AWS and manage the project with 5 undergraduate students using Agile techniques.
-* Relevant Coursework: Engineering Optimization, Educational Preparation.
-
-## Bachelor of Science in Mechatronics Engineering, University of Sao Paulo - GPA 7.9/10, FEBRUARY 2016 - DECEMBER 2022
-* Three years of scientific initiation projects with a scholarship, and teaching assistant for the Calculus and Control Systems for more than 50 students each.
-* Coordinator of the USP clothing campaign, increased the budget by 400%, and more than 55k pieces of clothing were donated.
-* Designed the chassis for the Electric Formula SAE Team and earned the 5th position in the national competition.
-* Relevant Coursework: Calculus, Linear Algebra, Statistics, Autonomous Aerial and Vehicles, and Control Systems.
-* Skills: Python, Data Science, Data Analysis, Artificial intelligence, Machine Learning, Matlab, scikit-learn, Pandas, NumPy, SciPy, matplotlib, Optuna, Git, Github, Linux, Unix, LaTeX, Mathematics, Calculus, Statistics, Communication, Presentations, Product Analytics, Public Speaking.
+# Education
+- **University of Sao Paulo**, Machine Learning, Computer Vision  - **MSc**, 2026
+- **University of Sao Paulo**, Software Engineering - **MBA**, 2026
+- **Virtual University of the State of São Paulo**, Education - **Specialization**, 2026
+- **University of Sao Paulo**, Mechatronics Engineering - **BE**, 2022
