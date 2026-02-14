@@ -11,10 +11,3 @@ I'm always open to collaborations in AI, data-driven innovation, and science edu
 
 ```{include} projects/projects.md
 :relative:
-
-
-```{include} publications.md
-:relative:
-
-```{include} cv.md
-:relative:
