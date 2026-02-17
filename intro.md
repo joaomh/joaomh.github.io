@@ -15,3 +15,5 @@ I bridge the gap between cutting-edge academic research and production-scale AI 
 
 ```{include} publications.md
 ```
+```{include} https://github.com/joaomh/joaomh/blob/main/README.md
+```
