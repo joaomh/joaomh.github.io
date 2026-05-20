@@ -1,4 +1,4 @@
-(function () {
+    (function () {
     const canvas = document.getElementById('topology-canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -11,28 +11,23 @@
     let fourierWaves = []; 
     let time = 0;
 
-    // Banco de equações e strings científicas (Unicode Matemático)
-    const TECH_POOL = [
-        // --- Identidade de Euler ---
+    // BANCO 1: Exclusivo para os Scanners 2D (Processamento de Imagem)
+    const BOX_LABELS = [
+        'FFT 2D Spectrum'
+    ];
+
+    // BANCO 2: Exclusivo para as Equações e Matrizes Flutuantes de Fundo
+    const SYMBOL_POOL = [
         'eⁱᵡ + 1 = 0', 
-        
-        // --- Transformadas de Fourier ---
         'ℱ{f(t)} = ∫ f(t)e⁻ⁱʷᵗdt', 
         'F(u,v) = ∬ f(x,y)e⁻ⁱ²ᵖⁱ⁽ᵘᵡ⁺ᵛʸ⁾dxdy',
-        'Magnitude |F(u,v)|', 
-        'Phase ∠F(u,v)',
-        
-        // --- Convolução & Filtros ---
         '(f * g)(t) = ∫ f(τ)g(t-τ)dτ',
         'g(x,y) = ω * f(x,y)', 
         '∇²f = ∂²f/∂x² + ∂²f/∂y²',
-        
-        // --- Tensores e Matrizes (Utilizando \n para quebra de linha no render) ---
         'Tensor 𝐗 ∈ ℝᴮ × ᶜ × ᴴ × ᵂ',
-        '⎡ 1  0 -1 ⎤\n⎢ 2  0 -2 ⎥\n⎣ 1  0 -1 ⎦', // Sobel Kernel horizontal
-        '⎡ 0 -1  0 ⎤\n⎢-1  4 -1 ⎥\n⎣ 0 -1  0 ⎦', // Laplacian Kernel
-        '⎡ w₁₁  w₁₂ ⎤\n⎣ w₂₁  w₂₂ ⎦',          // Matriz de Pesos (Weights)
-        
+        '⎡ 1  0 -1 ⎤\n⎢ 2  0 -2 ⎥\n⎣ 1  0 -1 ⎦', // Sobel
+        '⎡ 0 -1  0 ⎤\n⎢-1  4 -1 ⎥\n⎣ 0 -1  0 ⎦', // Laplacian
+        '⎡ w₁₁  w₁₂ ⎤\n⎣ w₂₁  w₂₂ ⎦'            // Weights
     ];
 
     function resize() {
@@ -70,7 +65,7 @@
         }
     }
 
-    // Ondas senoidais no rodapé (Simulando decomposição harmônica de linhas da imagem)
+    // Ondas senoidais no rodapé (Simulando decomposição harmônica)
     function initFourierWaves() {
         fourierWaves = [];
         for (let i = 0; i < 3; i++) {
@@ -85,16 +80,14 @@
     }
 
     // Inicialização dos blocos de processamento (Scanners de Imagem)
-function initScanners() {
+    function initScanners() {
         scanners = [];
-        const count = Math.max(2, Math.floor(w / 500));
-        // Specific labels meant ONLY for the 2D FFT boxes
-        const BOX_LABELS = ['FFT 2D Spectrum', 'Inverse FFT 2D', 'Magnitude |F(u,v)|', 'Phase ∠F(u,v)', 'Spatial Domain', 'Frequency Domain'];
-        
+        // const count = Math.max(2, Math.floor(w / 500));
+        const count = 1
         for (let i = 0; i < count; i++) {
             scanners.push({
-                x: Math.random() * w,
-                y: Math.random() * h,
+                x: Math.random() * (w - 180),
+                y: Math.random() * (h - 180),
                 sizeW: 120 + Math.random() * 50, 
                 sizeH: 120 + Math.random() * 50,
                 vx: (Math.random() - 0.5) * 0.25,
@@ -105,18 +98,18 @@ function initScanners() {
         }
     }
 
-function initSymbols() {
+    // Inicialização das Equações Flutuantes Ambientais
+    function initSymbols() {
         symbols = [];
-        // Controls how many equations float at the same time
-        const count = Math.max(8, Math.floor(w / 180)); 
+        const count = Math.max(8, Math.floor(w / 160)); 
         for (let i = 0; i < count; i++) {
             symbols.push({
-                text: TECH_POOL[Math.floor(Math.random() * TECH_POOL.length)],
+                text: SYMBOL_POOL[Math.floor(Math.random() * SYMBOL_POOL.length)],
                 x: Math.random() * w,
                 y: Math.random() * h,
-                vx: (Math.random() - 0.5) * 0.15, // Drift slightly left/right
-                vy: -0.05 - Math.random() * 0.1,  // Slow upward float
-                alpha: 0.03 + Math.random() * 0.06, // Ghostly transparency
+                vx: (Math.random() - 0.5) * 0.05, 
+                vy: -0.06 - Math.random() * 0.02,  // Subida lenta contínua
+                alpha: 0.04 + Math.random() * 0.06, 
                 size: 11 + Math.random() * 3,
             });
         }
@@ -191,72 +184,72 @@ function initSymbols() {
             }
         }
 
-        // 5. DESENHAR SCANNERS (SIMULAÇÃO LEGÍTIMA DE FFT 2D DE IMAGEM)
+        // 5. DESENHAR SCANNERS (FFT 2D DO PROPRIO PROJETO)
         for (const box of scanners) {
-            const isSpectral = box.label.includes('FFT') || box.label.includes('F(u,v)') || box.label.includes('Spectrum') || box.label.includes('Domain') || box.label.includes('Kernel') || box.label.includes('|F(u,v)|');
+            ctx.strokeStyle = `rgba(0, 230, 118, ${box.alpha})`;
+            ctx.lineWidth = 1;
+            ctx.strokeRect(box.x, box.y, box.sizeW, box.sizeH);
+
+            ctx.fillStyle = `rgba(0, 230, 118, ${box.alpha + 0.2})`;
+            const len = 8;
+            ctx.fillRect(box.x, box.y, len, 1.5); ctx.fillRect(box.x, box.y, 1.5, len);
+            ctx.fillRect(box.x + box.sizeW - len, box.y, len, 1.5); ctx.fillRect(box.x + box.sizeW, box.y, 1.5, len);
+            ctx.fillRect(box.x, box.y + box.sizeH, len, -1.5); ctx.fillRect(box.x, box.y + box.sizeH - len, 1.5, len);
+            ctx.fillRect(box.x + box.sizeW - len, box.y + box.sizeH, len, -1.5); ctx.fillRect(box.x + box.sizeW, box.y + box.sizeH - len, 1.5, len);
+
+            ctx.font = `9px 'JetBrains Mono', monospace`;
+            ctx.fillStyle = `rgba(0, 230, 118, ${box.alpha + 0.3})`;
+            ctx.fillText(box.label, box.x + 4, box.y - 4);
+
+            const centerX = box.x + box.sizeW / 2;
+            const centerY = box.y + box.sizeH / 2;
             
-            if (isSpectral) {
-                ctx.strokeStyle = `rgba(0, 230, 118, ${box.alpha})`;
-                ctx.lineWidth = 1;
-                ctx.strokeRect(box.x, box.y, box.sizeW, box.sizeH);
+            const pulseIntensity = 0.3 + 0.15 * Math.sin(time * 5);
+            const gradient = ctx.createRadialGradient(centerX, centerY, 2, centerX, centerY, box.sizeW * 0.45);
+            gradient.addColorStop(0, `rgba(0, 230, 118, ${box.alpha * 2.5 * pulseIntensity})`);
+            gradient.addColorStop(0.15, `rgba(0, 230, 118, ${box.alpha * 0.8})`);
+            gradient.addColorStop(0.4, `rgba(0, 230, 118, ${box.alpha * 0.15})`);
+            gradient.addColorStop(1, 'rgba(0,0,0,0)');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(box.x + 2, box.y + 2, box.sizeW - 4, box.sizeH - 4);
 
-                ctx.fillStyle = `rgba(0, 230, 118, ${box.alpha + 0.2})`;
-                const len = 8;
-                ctx.fillRect(box.x, box.y, len, 1.5); ctx.fillRect(box.x, box.y, 1.5, len);
-                ctx.fillRect(box.x + box.sizeW - len, box.y, len, 1.5); ctx.fillRect(box.x + box.sizeW, box.y, 1.5, len);
-                ctx.fillRect(box.x, box.y + box.sizeH, len, -1.5); ctx.fillRect(box.x, box.y + box.sizeH - len, 1.5, len);
-                ctx.fillRect(box.x + box.sizeW - len, box.y + box.sizeH, len, -1.5); ctx.fillRect(box.x + box.sizeW, box.y + box.sizeH - len, 1.5, len);
+            ctx.strokeStyle = `rgba(0, 230, 118, ${box.alpha * 0.4})`;
+            ctx.lineWidth = 0.5;
+            
+            ctx.beginPath();
+            ctx.moveTo(box.x + 10, centerY); ctx.lineTo(box.x + box.sizeW - 10, centerY);
+            ctx.moveTo(centerX, box.y + 10); ctx.lineTo(centerX, box.y + box.sizeH - 10);
+            ctx.stroke();
 
-                ctx.font = `9px 'JetBrains Mono', monospace`;
-                ctx.fillStyle = `rgba(0, 230, 118, ${box.alpha + 0.3})`;
-                ctx.fillText(box.label, box.x + 4, box.y - 4);
-
-                const centerX = box.x + box.sizeW / 2;
-                const centerY = box.y + box.sizeH / 2;
-                
-                const pulseIntensity = 0.3 + 0.15 * Math.sin(time * 5);
-                const gradient = ctx.createRadialGradient(centerX, centerY, 2, centerX, centerY, box.sizeW * 0.45);
-                gradient.addColorStop(0, `rgba(0, 230, 118, ${box.alpha * 2.5 * pulseIntensity})`);
-                gradient.addColorStop(0.15, `rgba(0, 230, 118, ${box.alpha * 0.8})`);
-                gradient.addColorStop(0.4, `rgba(0, 230, 118, ${box.alpha * 0.15})`);
-                gradient.addColorStop(1, 'rgba(0,0,0,0)');
-                
-                ctx.fillStyle = gradient;
-                ctx.fillRect(box.x + 2, box.y + 2, box.sizeW - 4, box.sizeH - 4);
-
-                ctx.strokeStyle = `rgba(0, 230, 118, ${box.alpha * 0.4})`;
-                ctx.lineWidth = 0.5;
-                
-                ctx.beginPath();
-                ctx.moveTo(box.x + 10, centerY); ctx.lineTo(box.x + box.sizeW - 10, centerY);
-                ctx.moveTo(centerX, box.y + 10); ctx.lineTo(centerX, box.y + box.sizeH - 10);
-                ctx.stroke();
-
-                ctx.fillStyle = `rgba(0, 230, 118, ${box.alpha * 0.8})`;
-                const peakDistance = (box.sizeW * 0.25);
-                const orbitOffset = Math.sin(time * 2) * 4;
-                
-                ctx.beginPath();
-                ctx.arc(centerX + peakDistance, centerY + orbitOffset, 1.5, 0, Math.PI * 2);
-                ctx.arc(centerX - peakDistance, centerY - orbitOffset, 1.5, 0, Math.PI * 2);
-                ctx.arc(centerX, centerY + peakDistance * 0.8 + orbitOffset, 1.5, 0, Math.PI * 2);
-                ctx.arc(centerX, centerY - peakDistance * 0.8 - orbitOffset, 1.5, 0, Math.PI * 2);
-                ctx.fill();
-            }
+            ctx.fillStyle = `rgba(0, 230, 118, ${box.alpha * 0.8})`;
+            const peakDistance = (box.sizeW * 0.25);
+            const orbitOffset = Math.sin(time * 2) * 4;
+            
+            ctx.beginPath();
+            ctx.arc(centerX + peakDistance, centerY + orbitOffset, 1.5, 0, Math.PI * 2);
+            ctx.arc(centerX - peakDistance, centerY - orbitOffset, 1.5, 0, Math.PI * 2);
+            ctx.arc(centerX, centerY + peakDistance * 0.8 + orbitOffset, 1.5, 0, Math.PI * 2);
+            ctx.arc(centerX, centerY - peakDistance * 0.8 - orbitOffset, 1.5, 0, Math.PI * 2);
+            ctx.fill();
         }
 
-        // 6. Desenha Equações e Matrizes Flutuantes
+// 6. DESENHAR EQUAÇÕES E MATRIZES INDEPENDENTES (CORRIGIDO: MAIS LEGÍVEL)
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         for (const sym of symbols) {
-            const flicker = 0.4 + 0.6 * Math.sin(time * 2.5 + sym.x);
-            ctx.font = `${sym.size}px 'JetBrains Mono', monospace`;
-            ctx.fillStyle = `rgba(79, 140, 255, ${sym.alpha * flicker})`;
+            // Modificado: O seno agora oscila de forma bem mais lenta (time * 0.8) 
+            // e o brilho nunca cai para zero (mínimo de 0.55 de visibilidade)
+            const flicker = 0.55 + 0.45 * Math.sin(time * 0.8 + sym.x * 0.05);
             
-            // Tratamento especial para desenhar matrizes multilinha (\n)
+            ctx.font = `${sym.size}px 'JetBrains Mono', monospace`;
+            
+            // Modificado: Multiplicamos por 2.0 para dar mais contraste e nitidez ao azul/branco
+            ctx.fillStyle = `rgba(255, 255, 255, ${sym.alpha * flicker * 2.2})`;
+            
             if (sym.text.includes('\n')) {
                 const lines = sym.text.split('\n');
-                const lineHeight = sym.size * 1.2;
+                const lineHeight = sym.size * 1.3; // Espaçamento entre linhas ligeiramente maior
                 lines.forEach((line, index) => {
                     ctx.fillText(line, sym.x, sym.y + (index - (lines.length - 1) / 2) * lineHeight);
                 });
@@ -305,14 +298,22 @@ function initSymbols() {
             if (box.y < 0 || box.y + box.sizeH > h) box.vy *= -1;
         }
 
-        for (const sym of symbols) {
+        // Movimentação e reciclagem correta dos símbolos
+for (const sym of symbols) {
             sym.x += sym.vx;
             sym.y += sym.vy;
-            // Se sumir no topo, reseta no fundo com um novo elemento matemático aleatório
-            if (sym.y < -50) {
-                sym.y = h + 40;
+            
+            // Se sumir no topo (y < -60), reseta no rodapé de forma segura
+            if (sym.y < -60) {
+                sym.y = h + 60;
                 sym.x = Math.random() * w;
-                sym.text = TECH_POOL[Math.floor(Math.random() * TECH_POOL.length)];
+                sym.text = SYMBOL_POOL[Math.floor(Math.random() * SYMBOL_POOL.length)];
+                
+                // --- MATCH THE SLOWER SPEED HERE TOO ---
+                sym.vx = (Math.random() - 0.5) * 0.05; 
+                sym.vy = -0.02 - Math.random() * 0.04;
+                
+                sym.alpha = 0.04 + Math.random() * 0.06;
             }
         }
     }
@@ -345,9 +346,9 @@ function initSymbols() {
     if (!target) return;
 
     const phrases = [
-            'PhD Candidate in Electrical Engineering',
-            'Specialist in Computer Vision & Deep Learning',
-            'Senior Data Engineer'
+        'PhD Candidate in Electrical Engineering',
+        'Specialist in Computer Vision & Deep Learning',
+        'Senior Data Engineer'
     ];
 
     let phraseIdx = 0;
