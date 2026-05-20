@@ -33,14 +33,6 @@
         '⎡ 0 -1  0 ⎤\n⎢-1  4 -1 ⎥\n⎣ 0 -1  0 ⎦', // Laplacian Kernel
         '⎡ w₁₁  w₁₂ ⎤\n⎣ w₂₁  w₂₂ ⎦',          // Matriz de Pesos (Weights)
         
-        // --- Processamento Digital de Imagens & Deep Learning ---
-        'f(x) = max(0, x)', 
-        'Conv2D', 
-        'MaxPool', 
-        'YOLOv12', 
-        'Grad-CAM Map',
-        'HiResCAM Layer', 
-        'Loss: 0.014'
     ];
 
     function resize() {
