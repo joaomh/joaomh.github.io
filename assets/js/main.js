@@ -85,9 +85,12 @@
     }
 
     // Inicialização dos blocos de processamento (Scanners de Imagem)
-    function initScanners() {
+function initScanners() {
         scanners = [];
         const count = Math.max(2, Math.floor(w / 500));
+        // Specific labels meant ONLY for the 2D FFT boxes
+        const BOX_LABELS = ['FFT 2D Spectrum', 'Inverse FFT 2D', 'Magnitude |F(u,v)|', 'Phase ∠F(u,v)', 'Spatial Domain', 'Frequency Domain'];
+        
         for (let i = 0; i < count; i++) {
             scanners.push({
                 x: Math.random() * w,
@@ -96,23 +99,24 @@
                 sizeH: 120 + Math.random() * 50,
                 vx: (Math.random() - 0.5) * 0.25,
                 vy: (Math.random() - 0.5) * 0.25,
-                label: TECH_POOL[Math.floor(Math.random() * 5)], // Focado nos primeiros itens para labels
+                label: BOX_LABELS[Math.floor(Math.random() * BOX_LABELS.length)], 
                 alpha: 0.08 + Math.random() * 0.12
             });
         }
     }
 
-    function initSymbols() {
+function initSymbols() {
         symbols = [];
-        const count = Math.max(6, Math.floor(w / 220));
+        // Controls how many equations float at the same time
+        const count = Math.max(8, Math.floor(w / 180)); 
         for (let i = 0; i < count; i++) {
             symbols.push({
                 text: TECH_POOL[Math.floor(Math.random() * TECH_POOL.length)],
                 x: Math.random() * w,
                 y: Math.random() * h,
-                vx: (Math.random() - 0.5) * 0.1,
-                vy: -0.08 - Math.random() * 0.12,
-                alpha: 0.04 + Math.random() * 0.06,
+                vx: (Math.random() - 0.5) * 0.15, // Drift slightly left/right
+                vy: -0.05 - Math.random() * 0.1,  // Slow upward float
+                alpha: 0.03 + Math.random() * 0.06, // Ghostly transparency
                 size: 11 + Math.random() * 3,
             });
         }
