@@ -653,11 +653,9 @@ a:hover { color: #7db0ff; }
     top: 0; left: 0;
 }
 
-.flag-br { background: linear-gradient(90deg, var(--accent-green) 50%, var(--accent-gold) 50%); }
-.flag-nl { background: linear-gradient(180deg, #ae1c28 33%, #fff 33% 66%, #21468b 66%); height: 4px; }
-.flag-be { background: linear-gradient(90deg, #000 33%, #ffd700 33% 66%, #ff0000 66%); }
-.flag-us { background: linear-gradient(90deg, #3c3b6e 40%, #b22234 40%); }
-.flag-hk { background: linear-gradient(90deg, #de2910 100%, #de2910 100%); }
+.flag-prog1 { background: linear-gradient(90deg, var(--accent-green) 20%, var(--accent-gold) 80%); }
+.flag-prog2 { background: linear-gradient(90deg, var(--accent-green) 40%, var(--accent-gold) 60%); }
+.flag-end { background: linear-gradient(90deg, var(--accent-green) 100%, var(--accent-gold) 0%); }
 
 .edu-card h3 {
     font-size: 0.95rem;
