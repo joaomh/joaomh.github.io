@@ -653,7 +653,7 @@ a:hover { color: #7db0ff; }
     top: 0; left: 0;
 }
 
-.flag-prog1 { background: linear-gradient(90deg, var(--accent-green) 20%, var(--accent-gold) 80%); }
+.flag-prog1 { background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-green) 20%, var(--accent-gold) 20%, var(--accent-gold) 100%);}
 .flag-prog2 { background: linear-gradient(90deg, var(--accent-green) 40%, var(--accent-gold) 60%); }
 .flag-end { background: linear-gradient(90deg, var(--accent-green) 100%, var(--accent-gold) 0%); }
 
