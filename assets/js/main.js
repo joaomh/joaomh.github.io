@@ -1,4 +1,4 @@
-    (function () {
+(function () {
     const canvas = document.getElementById('topology-canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -101,7 +101,7 @@
     // Inicialização das Equações Flutuantes Ambientais
     function initSymbols() {
         symbols = [];
-        const count = Math.max(8, Math.floor(w / 160)); 
+        const count = Math.max(12, Math.floor(w / 100));
         for (let i = 0; i < count; i++) {
             symbols.push({
                 text: SYMBOL_POOL[Math.floor(Math.random() * SYMBOL_POOL.length)],
@@ -153,7 +153,7 @@
         for (let l = 0; l < layers.length - 1; l++) {
             for (const n1 of layers[l]) {
                 for (const n2 of layers[l + 1]) {
-                    const alpha = 0.05 + (Math.sin(time + n1.y * 0.02) * 0.02);
+                    const alpha = 0.12 + (Math.sin(time + n1.y * 0.02) * 0.04);
                     ctx.beginPath();
                     ctx.moveTo(n1.x, n1.y);
                     ctx.lineTo(n2.x, n2.y);
@@ -177,9 +177,9 @@
             for (const node of layers[l]) {
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-                if (l === 0) ctx.fillStyle = 'rgba(0, 230, 118, 0.5)';
-                else if (l === layers.length - 1) ctx.fillStyle = 'rgba(255, 109, 0, 0.5)'; 
-                else ctx.fillStyle = 'rgba(79, 140, 255, 0.35)';
+                if (l === 0) ctx.fillStyle = 'rgba(0, 230, 118, 0.75)';
+                else if (l === layers.length - 1) ctx.fillStyle = 'rgba(255, 109, 0, 0.75)'; 
+                else ctx.fillStyle = 'rgba(79, 140, 255, 0.6)';
                 ctx.fill();
             }
         }
@@ -245,7 +245,7 @@
             ctx.font = `${sym.size}px 'JetBrains Mono', monospace`;
             
             // Modificado: Multiplicamos por 2.0 para dar mais contraste e nitidez ao azul/branco
-            ctx.fillStyle = `rgba(255, 255, 255, ${sym.alpha * flicker * 2.2})`;
+            ctx.fillStyle = `rgba(255, 255, 255, ${sym.alpha * flicker * 3.5})`;
             
             if (sym.text.includes('\n')) {
                 const lines = sym.text.split('\n');
@@ -287,7 +287,7 @@
             }
         }
 
-        if (Math.random() < 0.05 && dataPulses.length < 30) {
+        if (Math.random() < 0.08 && dataPulses.length < 50) {
             spawnPulse();
         }
 
