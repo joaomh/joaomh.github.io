@@ -25,8 +25,8 @@
         'g(x,y) = ω * f(x,y)', 
         '∇²f = ∂²f/∂x² + ∂²f/∂y²',
         'Tensor 𝐗 ∈ ℝᴮ × ᶜ × ᴴ × ᵂ',
-        '&frac15;⎡ 0  1 0 ⎤\n⎢ 1  1 1 ⎥\n⎣ 0  1 0 ⎦', // low pass filter
-        '&frac15;⎡ 0  -1 0 ⎤\n⎢ -1  4 -1 ⎥\n⎣ 0  -1 0 ⎦', // high pass filter
+        '⅕⎡ 0  1 0 ⎤\n⎢ 1  1 1 ⎥\n⎣ 0  1 0 ⎦', // low pass filter
+        '⅕⎡ 0  -1 0 ⎤\n⎢ -1  4 -1 ⎥\n⎣ 0  -1 0 ⎦', // high pass filter
         '⎡ 1  0 -1 ⎤\n⎢ 2  0 -2 ⎥\n⎣ 1  0 -1 ⎦', // Sobel
         '⎡ 0 -1  0 ⎤\n⎢-1  4 -1 ⎥\n⎣ 0 -1  0 ⎦', // Laplacian
         '⎡ w₁₁  w₁₂ ⎤\n⎣ w₂₁  w₂₂ ⎦'            // Weights
