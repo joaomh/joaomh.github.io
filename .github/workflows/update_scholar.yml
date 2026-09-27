@@ -27,7 +27,7 @@ jobs:
           pip install scholarly beautifulsoup4
 
       - name: Run update script
-        run: python /src/update_scholar.py
+        run: python src/update_scholar.py
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
