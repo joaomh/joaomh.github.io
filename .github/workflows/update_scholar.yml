@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install scholarly beautifulsoup4
+          pip install scholarly beautifulsoup4 bibtexparser==1.4.1
 
       - name: Run update script
         run: python src/update_scholar.py
