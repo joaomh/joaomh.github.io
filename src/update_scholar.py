@@ -1,9 +1,8 @@
 import os
-from scholarly import scholarly
+from scholarly import scholarly, ProxyGenerator
 from bs4 import BeautifulSoup
 
 AUTHOR_ID = "bXATl38AAAAJ"
-
 
 PAPER_MAPPINGS = {
     "Biological Sex Determination in Cadavers": "cit-sex-det",
@@ -18,6 +17,11 @@ PAPER_MAPPINGS = {
 }
 
 def main():
+    print("Configurando proxy para contornar bloqueio do Google (isso pode demorar um pouco)...")
+    pg = ProxyGenerator()
+    pg.FreeProxies() # Busca proxies gratuitos disponíveis
+    scholarly.use_proxy(pg)
+
     print("Buscando dados do Google Scholar...")
     author = scholarly.search_author_id(AUTHOR_ID)
     author = scholarly.fill(author, sections=['counts', 'publications'])
@@ -26,11 +30,9 @@ def main():
     total_publications = len(author.get('publications', []))
     print(f"Citações totais: {total_citations} | Publicações: {total_publications}")
 
-    # Abre o HTML atual
     with open('index.html', 'r', encoding='utf-8') as f:
         soup = BeautifulSoup(f, 'html.parser')
 
-    # 1. Atualiza totais (atualizando o texto e o data-target para a animação JS funcionar)
     span_citations = soup.find(id="total-citations")
     if span_citations:
         span_citations.string = str(total_citations)
@@ -41,12 +43,10 @@ def main():
         span_pubs.string = str(total_publications)
         span_pubs['data-target'] = str(total_publications)
 
-    # 2. Atualiza citações individuais por paper
     for pub in author.get('publications', []):
         title = pub['bib']['title']
         num_citations = pub.get('num_citations', 0)
         
-        # Procura se o título do paper bate com nosso mapeamento
         for key_title, html_id in PAPER_MAPPINGS.items():
             if key_title.lower() in title.lower():
                 span_pub = soup.find(id=html_id)
@@ -55,7 +55,6 @@ def main():
                     print(f"Atualizado {html_id} para {num_citations} citações.")
                 break
 
-    # Salva o HTML modificado
     with open('index.html', 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print("index.html atualizado com sucesso.")
