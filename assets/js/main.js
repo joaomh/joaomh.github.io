@@ -348,7 +348,7 @@ for (const sym of symbols) {
     if (!target) return;
 
     const phrases = [
-        'PhD Student in Electrical Engineering',
+        'PhD Candidate in Electrical Engineering',
         'Specialist in Computer Vision & Deep Learning',
         'Data Scientist & Data Engineer'
     ];
